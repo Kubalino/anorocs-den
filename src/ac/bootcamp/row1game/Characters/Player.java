@@ -7,6 +7,6 @@ public class Player extends Entity {
     }
 
     public void heal() {
-        super.heal(25, 50);
+        super.heal(50, 100);
     }
 }

@@ -76,8 +76,21 @@ public class Test {
 */
         System.out.println(monster3.getHealth());
 
+        player.levelUp();
+        player.levelUp();
+
         monster3.spell(player);
-        player.spell(monster3);
+        monster3.spell(player);
+        monster3.attack(player);
+        System.out.println(player.getHealth());
+
+        RandomMonsterSkills.getRandomMonsterSkill(monster3,player);
+        RandomMonsterSkills.getRandomMonsterSkill(monster3,player);
+        RandomMonsterSkills.getRandomMonsterSkill(monster3,player);
+        RandomMonsterSkills.getRandomMonsterSkill(monster3,player);
+        RandomMonsterSkills.getRandomMonsterSkill(monster3,player);
+        RandomMonsterSkills.getRandomMonsterSkill(monster3,player);
+        RandomMonsterSkills.getRandomMonsterSkill(monster3,player);
 
     }
 

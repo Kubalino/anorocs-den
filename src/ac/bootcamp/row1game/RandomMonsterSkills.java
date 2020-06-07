@@ -17,7 +17,8 @@ public class RandomMonsterSkills {
         double random = Math.random();
 
         if(monster instanceof HealerMonster) {
-            heal_chance = 0.7;
+            heal_chance = 0.5;
+            block_chance = 0.2;
         }
 
         if(random <= spell_chance) {
