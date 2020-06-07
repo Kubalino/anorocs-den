@@ -1,101 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="44e29b99-4632-4b4a-99f2-8f8f117ae927" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Character.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/CharacterType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Damagable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Monster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Randomizer.java" afterDir="false" />
+    <list default="true" id="11f59b17-7c35-4b5b-8124-27af9b0b8218" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/background/buttonExit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/background/buttonInfo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/background/buttonStart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/simple-graphics.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/Button.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/ButtonExit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/ButtonInstructions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/ButtonStart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/HomeMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/simplegraphics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/simplegraphics.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/row1game.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Main.java" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+    <option name="PARALLEL_COMPILATION" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
-  <component name="ProjectId" id="1cxhdR0ghklBnECwke5TrVVxsKH" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1d01XhfrZgPhxJBqvgNPKtHZHbF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/workspace/utilities/simplegraphics.jar!/" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/simple-graphics.jar!/" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="Debugger_Data_Views_Java" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ac.bootcamp.row1game.Main" />
+      <module name="row1game" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ac.bootcamp.row1game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ac.bootcamp.row1game.Test" />
+      <module name="row1game" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ac.bootcamp.row1game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\bedgarmo\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="44e29b99-4632-4b4a-99f2-8f8f117ae927" name="Default Changelist" comment="" />
-      <created>1591476238261</created>
+      <changelist id="11f59b17-7c35-4b5b-8124-27af9b0b8218" name="Default Changelist" comment="" />
+      <created>1591547237793</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1591476238261</updated>
+      <updated>1591547237793</updated>
+      <workItem from="1591547238949" duration="103000" />
+      <workItem from="1591547456467" duration="6070000" />
+      <workItem from="1591563036597" duration="554000" />
+      <workItem from="1591563618616" duration="3779000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="804" y="321" width="374" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1591523762538">
-      <screen x="72" y="27" width="1848" height="1173" />
-    </state>
-    <state x="804" y="321" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/72.27.1848.1173@72.27.1848.1173" timestamp="1591523762538" />
-    <state x="618" y="360" width="735" height="520" key="FileChooserDialogImpl" timestamp="1591477806523">
-      <screen x="72" y="27" width="1848" height="1173" />
-    </state>
-    <state x="618" y="360" width="735" height="520" key="FileChooserDialogImpl/72.27.1848.1173@72.27.1848.1173" timestamp="1591477806523" />
-    <state x="479" y="191" width="1024" height="852" key="SettingsEditor" timestamp="1591476583217">
-      <screen x="72" y="27" width="1848" height="1173" />
-    </state>
-    <state x="479" y="191" width="1024" height="852" key="SettingsEditor/72.27.1848.1173@72.27.1848.1173" timestamp="1591476583217" />
   </component>
 </project>
