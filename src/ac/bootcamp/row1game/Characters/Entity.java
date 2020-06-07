@@ -8,6 +8,7 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 public abstract class Entity implements Skills {
 
     private final double HIT_CHANCE = 0.8;
+    private final double CRIT_CHANCE = 0.15;
 
 
     private int health;
@@ -37,6 +38,10 @@ public abstract class Entity implements Skills {
         int damage = baseDamage + (Randomizer.getRandom(0, baseDamage));
 
         if (Math.random() < getHIT_CHANCE()) {
+            if(Math.random() < getCRIT_CHANCE() ){
+                System.out.println("CRITICAL");
+                damage *=2;
+            }
             System.out.println("HIT Power: " + damage);
             target.hit(damage);
             return;
@@ -48,9 +53,13 @@ public abstract class Entity implements Skills {
 
     @Override
     public void spell(Entity target) {
-        int damage = Randomizer.getRandom(0, baseDamage * 4);
+        int damage = Randomizer.getRandom(0, baseDamage * 3);
 
         if(Math.random() < getHIT_CHANCE()) {
+            if(Math.random() < getCRIT_CHANCE()){
+                System.out.println("CRITICAL");
+                damage *=2;
+            }
             System.out.println("SPELL Power: " + damage);
             target.hit(damage);
             return;
@@ -124,6 +133,10 @@ public abstract class Entity implements Skills {
 
     public double getHIT_CHANCE() {
         return HIT_CHANCE;
+    }
+
+    public double getCRIT_CHANCE(){
+        return CRIT_CHANCE;
     }
 
     public int getHealth() {
