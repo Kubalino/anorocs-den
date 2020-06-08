@@ -7,8 +7,8 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public abstract class Entity implements Skills {
 
-    private final double HIT_CHANCE = 0.8;
-    private final double CRIT_CHANCE = 0.15;
+    private final double HIT_CHANCE = 0.9;
+    private final double CRIT_CHANCE = 0.2;
 
 
     private int health;
@@ -95,6 +95,14 @@ public abstract class Entity implements Skills {
 
     }
 
+    public int getPotionAvailable(){
+        return potionAvailable;
+    }
+
+    public void stopBlocking(){
+        blocking = false;
+    }
+
     @Override
     public void hit(int damage) {
 
@@ -103,7 +111,7 @@ public abstract class Entity implements Skills {
                 System.out.println(("Attack blocked!"));
                 damage = 0;
             }
-            blocking = false;
+
         }
 
         damage -= defense;
@@ -124,7 +132,7 @@ public abstract class Entity implements Skills {
     public void levelUp() {
 
         level += 1;
-        maxHP += 50;
+        maxHP += 100;
         health = maxHP;
         baseDamage += 5;
         defense += 3;

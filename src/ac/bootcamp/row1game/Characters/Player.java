@@ -9,4 +9,9 @@ public class Player extends Entity {
     public void heal() {
         super.heal(50, 100);
     }
+
+    @Override
+    public void getHeal(){
+        heal();
+    }
 }

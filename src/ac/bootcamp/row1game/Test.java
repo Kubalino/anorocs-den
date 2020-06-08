@@ -1,4 +1,4 @@
-/*package ac.bootcamp.row1game;
+package ac.bootcamp.row1game;
 
 
 import ac.bootcamp.row1game.Characters.Entity;
@@ -31,6 +31,7 @@ public class Test {
         System.out.println(player.getHealth());
         */
         //block() test
+
         /*
         System.out.println(player.getHealth());
         System.out.println(player.isBlocking());
@@ -40,7 +41,7 @@ public class Test {
         monster1.attack(player);
         System.out.println(player.getHealth());
         System.out.println(player.isBlocking());
-        */
+
         //Primeiro loop test
         /*
         while(!(player.isDead())) {
@@ -91,9 +92,12 @@ public class Test {
         RandomMonsterSkills.getRandomMonsterSkill(monster3,player);
         RandomMonsterSkills.getRandomMonsterSkill(monster3,player);
         RandomMonsterSkills.getRandomMonsterSkill(monster3,player);
+        */
+
+        Game game = new Game();
+        game.start();
 
     }
 
 
 }
-*/

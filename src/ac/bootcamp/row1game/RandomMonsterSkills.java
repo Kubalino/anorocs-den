@@ -11,7 +11,7 @@ public class RandomMonsterSkills {
     public static void getRandomMonsterSkill(Entity monster, Entity player) {
 
         double heal_chance = 0.45;
-        double block_chance = 0.30;
+        double block_chance = 0.20;
         double spell_chance = 0.10;
 
         double random = Math.random();
@@ -24,6 +24,7 @@ public class RandomMonsterSkills {
         if(random <= spell_chance) {
             System.out.println("SPELL");
             monster.spell(player);
+            return;
         }
 
         if(random <= block_chance) {
@@ -33,6 +34,10 @@ public class RandomMonsterSkills {
         }
 
         if(random <= heal_chance) {
+            if(monster.getPotionAvailable() == 0){
+                getRandomMonsterSkill(monster, player);
+                return;
+            }
             System.out.println("HEAL");
             monster.getHeal();
             return;
