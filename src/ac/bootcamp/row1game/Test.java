@@ -1,4 +1,4 @@
-package ac.bootcamp.row1game;
+/*package ac.bootcamp.row1game;
 
 
 import ac.bootcamp.row1game.Characters.Entity;
@@ -57,7 +57,7 @@ public class Test {
             System.out.println("Monster turn!");
             monster1.attack(player);
             Thread.sleep(2000);
-            */
+
 
         //Game test
         Game game1 = Factory.createGame();
@@ -68,12 +68,12 @@ public class Test {
         Entity monster3 = game1.getMonsters(2);
         Entity player = game1.getPlayer();
 
-  /*      RandomMonsterSkills.getRandomMonsterSkill(monster3, player);
+      RandomMonsterSkills.getRandomMonsterSkill(monster3, player);
         RandomMonsterSkills.getRandomMonsterSkill(monster3, player);
         RandomMonsterSkills.getRandomMonsterSkill(monster3, player);
         RandomMonsterSkills.getRandomMonsterSkill(monster3, player);
         RandomMonsterSkills.getRandomMonsterSkill(monster3, player);
-*/
+
         System.out.println(monster3.getHealth());
 
         player.levelUp();
@@ -96,3 +96,4 @@ public class Test {
 
 
 }
+*/

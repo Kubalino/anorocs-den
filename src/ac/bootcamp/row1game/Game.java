@@ -3,14 +3,18 @@ package ac.bootcamp.row1game;
 import ac.bootcamp.row1game.Characters.Entity;
 import ac.bootcamp.row1game.Characters.Factory;
 import ac.bootcamp.row1game.Characters.Player;
+import ac.bootcamp.row1game.display.Display;
 
 public class Game {
 
-    private Player player;
-    private Entity[] monsters;
+   // private Player player;
+   // private Entity[] monsters;
+    private Display display;
 
     public Game() {
-        this.player = Factory.createPlayer();
+
+     //   this.display = new Display();
+    /*    this.player = Factory.createPlayer();
         this.monsters = new Entity[4];
         monsters[0] = Factory.createNormalMonster();
         monsters[1] = Factory.createArmouredMonster();
@@ -20,7 +24,10 @@ public class Game {
         monsters[1].levelUp();
         monsters[2].levelUp();monsters[2].levelUp();
         monsters[3].levelUp();monsters[3].levelUp();monsters[3].levelUp();
+        */
     }
+
+    /*
 
     public Player getPlayer() {
         return player;
@@ -30,5 +37,10 @@ public class Game {
         return monsters[monster];
     }
 
+    */
 
+   /* public void start(){
+        display.init();
+    }
+       */
 }
