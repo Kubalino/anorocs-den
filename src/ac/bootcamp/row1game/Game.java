@@ -4,6 +4,7 @@ import ac.bootcamp.row1game.Characters.Entity;
 import ac.bootcamp.row1game.Characters.Factory;
 import ac.bootcamp.row1game.Characters.Player;
 import ac.bootcamp.row1game.display.Display;
+import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 
 public class Game {
 
@@ -11,6 +12,7 @@ public class Game {
     private Entity[] monsters;
     private Display display;
     private int monsterCounter = 0;
+    private KeyboardMouse k = new KeyboardMouse();
 
 
     public Game() {
@@ -27,17 +29,56 @@ public class Game {
         monsters[2].levelUp();monsters[2].levelUp();
         monsters[3].levelUp();monsters[3].levelUp();monsters[3].levelUp();
 
+        k.init();
+
+
+
+
     }
+
+
 
 
     public void start() throws InterruptedException {
 
+
         while(!player.isDead()){
 
-            System.out.println("\n" + "Player turn : " + player.getHealth());
 
-           RandomMonsterSkills.getRandomMonsterSkill(player,monsters[monsterCounter]);
-           //Thread.sleep(2000);
+            System.out.println("\n" + "Player turn : " + player.getHealth());
+            //input part
+
+            while(!k.getIsPressed()) {
+                Thread.sleep(500);
+            }
+
+                switch (k.getKeyPressed()) {
+                    case "1":
+                        player.attack(monsters[monsterCounter]);
+                        break;
+                    case "2":
+                       player.spell(monsters[monsterCounter]);
+                        break;
+                    case "3":
+                       if(player.getPotionAvailable() == 0){
+                           System.out.println("no more pots");
+                       continue;
+                       }
+                       player.heal();
+                        break;
+                    case "4":
+                        player.block();
+                        break;
+
+                    default:
+                        System.out.println("invalid");
+                        continue;
+
+                }
+
+
+           //RandomMonsterSkills.getRandomMonsterSkill(player,monsters[monsterCounter]);
+           Thread.sleep(2000);
 
            monsters[monsterCounter].stopBlocking();
 
@@ -49,15 +90,15 @@ public class Game {
 
                monsterCounter +=1;
                System.out.println("\n" + "a wild monster appeared");
-               //Thread.sleep(1000);
+               Thread.sleep(1000);
                player.levelUp();
-               //Thread.sleep(000);
+
                continue;
            }
             System.out.println( "\n" + "monster turn : " + monsters[monsterCounter].getHealth());
 
            RandomMonsterSkills.getRandomMonsterSkill(monsters[monsterCounter],player);
-           //Thread.sleep(2000);
+           Thread.sleep(2000);
 
            player.stopBlocking();
 

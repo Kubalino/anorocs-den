@@ -1,22 +1,25 @@
 package ac.bootcamp.row1game;
-import ac.bootcamp.row1game.simplegraphics.keyboard.Keyboard;
-import ac.bootcamp.row1game.keyboard.KeyboardEvent;
-import ac.bootcamp.row1game.simplegraphics.keyboard.KeyboardEventType;
-import ac.bootcamp.row1game.simplegraphics.keyboard.KeyboardHandler;
-public class KeyboardMouse implements KeyboardHandler{
+import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
+import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
+import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
+import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
+
+public class KeyboardMouse implements KeyboardHandler {
 
     private Keyboard keyboard = new Keyboard(this);
     private boolean key1 = false;
     private boolean key2 = false;
     private boolean key3 = false;
     private boolean key4 = false;
-    private boolean keyEspace = false;
-    private boolean keyquit = false;
+    private boolean keySpace = false;
+    private boolean keyQuit = false;
     private boolean keyHelp = false;
+    private String keyPressed;
+    private boolean isPressed = false;
 
 
 
-    public KeyboardAndMouse(){
+    public KeyboardMouse(){
 
     }
 
@@ -66,79 +69,57 @@ public class KeyboardMouse implements KeyboardHandler{
         return key2;
     }
 
-    public boolean isKey3() {
-        return key3;
+
+
+    public String getKeyPressed(){
+        return keyPressed;
     }
 
-    public boolean isKey4() {
-        return key4;
+    public boolean getIsPressed() {
+        if(isPressed){
+            isPressed = false;
+            return true;
+        }
+        return false;
     }
 
-    public boolean isKeyEspace() {
-        return keyEspace;
-    }
 
-    public boolean isKeyquit() {
-        return keyquit;
-    }
-
-    public boolean isKeyHelp() {
-        return keyHelp;
-    }
-
-    public void setKey1(boolean key1) {
-        this.key1 = key1;
-    }
-
-    public void setKey2(boolean key2) {
-        this.key2 = key2;
-    }
-
-    public void setKey3(boolean key3) {
-        this.key3 = key3;
-    }
-
-    public void setKey4(boolean key4) {
-        this.key4 = key4;
-    }
-
-    public void setKeyEspace(boolean keyEspace) {
-        this.keyEspace = keyEspace;
-    }
-
-    public void setKeyquit(boolean keyquit) {
-        this.keyquit = keyquit;
-    }
-
-    public void setKeyHelp(boolean keyHelp) {
-        this.keyHelp = keyHelp;
-    }
 
     @Override
-    public void keyPressed(KeyboardEvent keyboardEvent) {
+    public  void keyPressed(KeyboardEvent keyboardEvent){
+
         switch (keyboardEvent.getKey()) {
             case KeyboardEvent.KEY_1:
-                key1=true;
+                keyPressed = "1";
                 break;
+
             case KeyboardEvent.KEY_2:
-                key2= true;
+                keyPressed = "2";
                 break;
+
             case KeyboardEvent.KEY_3:
-                key3 =true;
+                keyPressed = "3";
                 break;
+
             case KeyboardEvent.KEY_4:
-                key4=true;
+                keyPressed="4";
                 break;
+
             case KeyboardEvent.KEY_SPACE:
-                keyEspace = true;
+                keyPressed = "space";
                 break;
+
             case KeyboardEvent.KEY_Q:
-                keyquit=true;
+               System.exit(0);
                 break;
+
             case KeyboardEvent.KEY_H:
-                keyHelp=true;
+                keyPressed= "h";
+
                 break;
         }
+
+        isPressed = true;
 
     }
 
