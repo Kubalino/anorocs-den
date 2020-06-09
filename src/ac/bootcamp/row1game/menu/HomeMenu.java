@@ -20,8 +20,9 @@ public class HomeMenu implements KeyboardHandler {
 	private Button buttonExit;
 	private Button buttonInstruction;
 	private Picture backgroundSky;
-	private Picture bat;
-	private Picture cloud;
+	private Actor bat;
+	private Actor cloud;
+	private Actor[] actors = new Actor[2];
 
 	public HomeMenu() {
 		keyboard = new Keyboard(this);
@@ -38,10 +39,14 @@ public class HomeMenu implements KeyboardHandler {
 		mountains = new Picture(rectangleSky.getX(),rectangleSky.getY(),"assets/mainMenu/background/mountains.png");
 		mountains.draw();
 		
-		cloud = new Picture(500,300,"assets/mainMenu/actors/cloud.png");
+		cloud = new Actor(500,300,"assets/mainMenu/actors/cloud.png");
+		cloud.changeToCloud();
+		actors[0] = cloud;
 		cloud.draw();
 		
-		bat = new Picture(500,200,"assets/mainMenu/actors/bat.png");
+		bat = new Actor(500,200,"assets/mainMenu/actors/bat.png");
+		bat.changeToBat();
+		actors[1] = bat;
 		bat.draw();
 		
 		pillars = new Picture(rectangleSky.getX(),rectangleSky.getY(),"assets/mainMenu/background/pillars.png");
@@ -60,6 +65,15 @@ public class HomeMenu implements KeyboardHandler {
 		buttonInstruction = new ButtonInstructions(250, 612, "assets/mainMenu/buttons/buttonInfo.png");	
 		drawAndRegisterButton(buttonInstruction);
 
+		menuLoop();
+	}
+	
+	private void menuLoop() {
+		while(true) {
+			for(Actor actor : actors) {
+				actor.repaint();
+			}
+		}
 	}
 
 	private void drawAndRegisterButton(Button button) {
