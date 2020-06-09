@@ -44,12 +44,12 @@ public class Actor extends Picture {
 	}
 
 	public void changeToBat() {
-		this.load("assets/mainMenu/actors/bat.png");
+		this.load("mainMenu/actors/bat.png");
 		speed = BAT_SPEED;
 	}
 
 	public void changeToCloud() {
-		this.load("assets/mainMenu/actors/cloud.png");
+		this.load("mainMenu/actors/cloud.png");
 		speed = CLOUD_SPEED;
 	}
 }
