@@ -6,17 +6,16 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 public class Display {
 
 
-    private final String BACKGROUND = "/Users/codecadet/dev/row1game/src/ac/bootcamp/row1game/display/sprites/background.jpg";
-    private final String ACTION_BAR = "/Users/codecadet/dev/row1game/src/ac/bootcamp/row1game/display/sprites/action_bar.jpg";
-    private final String PLAYER = "/Users/codecadet/dev/row1game/src/ac/bootcamp/row1game/display/sprites/shoot_0.png";
-    private final String SOLDIER_NORMAL = "/sprites/soldier_normal.png";
-    private final String SOLDIER_ARMOURED = "/sprites/soldier_armoured.png";
-    private final String SOLDIER_DEAD = "/sprites/soldier_dead.png";
-    private final String GUNSHOT = "/sprites/gunshot.png";
-    private final String PLAYER_SHOOT_1 = "/sprites/shoot_1.png";
-    private final String PLAYER_SHOOT_2 = "/sprites/shoot_2.png";
-    private final String PLAYER_SHOOT_3 = "/sprites/shoot_3.png";
-    private final String PLAYER_SHOOT_4 = "/sprites/shoot_4.png";
+    private final String BACKGROUND = "assets/sprites/background.jpg";
+    private final String ACTION_BAR = "assets/sprites/action_bar.jpg";
+    private final String PLAYER = "assets/sprites/shoot_0.png";
+    private final String SOLDIER_NORMAL = "assets/sprites/soldier_normal.png";
+    private final String SOLDIER_ARMOURED = "assets/sprites/soldier_armoured.png";
+    private final String SOLDIER_DEAD = "assets/sprites/soldier_dead.png";
+    private final String PLAYER_SHOOT_1 = "assets/sprites/shoot_1.png";
+    private final String PLAYER_SHOOT_2 = "assets/sprites/shoot_2.png";
+    private final String PLAYER_SHOOT_3 = "assets/sprites/shoot_3.png";
+    private final String PLAYER_SHOOT_4 = "assets/sprites/shoot_4.png";
 
     private Picture background;
     private Picture actionBar;
@@ -32,9 +31,8 @@ public class Display {
         background = new Picture(10, 10, BACKGROUND);
         actionBar = new Picture(228, 320, ACTION_BAR);
         player = new Picture(100, 150, PLAYER);
-    //    soldierNormal = new Picture(450, 100, SOLDIER_NORMAL);
-     //   soldierArmoured = new Picture(450, 100, SOLDIER_ARMOURED);
-      //  gunshot = new Picture(270, 165, GUNSHOT);
+        soldierNormal = new Picture(450, 100, SOLDIER_NORMAL);
+       soldierArmoured = new Picture(450, 100, SOLDIER_ARMOURED);
     }
 
     public void init() {

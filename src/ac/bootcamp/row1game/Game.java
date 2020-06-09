@@ -4,7 +4,6 @@ import ac.bootcamp.row1game.Characters.Entity;
 import ac.bootcamp.row1game.Characters.Factory;
 import ac.bootcamp.row1game.Characters.Player;
 import ac.bootcamp.row1game.display.Display;
-import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 
 public class Game {
 
@@ -18,6 +17,7 @@ public class Game {
     public Game() {
 
        this.display = new Display();
+
       this.player = Factory.createPlayer();
         this.monsters = new Entity[4];
         monsters[0] = Factory.createNormalMonster();
@@ -33,7 +33,6 @@ public class Game {
 
 
 
-
     }
 
 
@@ -41,12 +40,15 @@ public class Game {
 
     public void start() throws InterruptedException {
 
+        display.init();
 
         while(!player.isDead()){
 
 
             System.out.println("\n" + "Player turn : " + player.getHealth());
             //input part
+            display.drawActionBar();
+            display.drawSoldierNormal();
 
             k.setIsPressed();
 
@@ -57,6 +59,7 @@ public class Game {
                 switch (k.getKeyPressed()) {
                     case "1":
                         player.attack(monsters[monsterCounter]);
+                        display.drawGunshot();
                         break;
                     case "2":
                        player.spell(monsters[monsterCounter]);
@@ -78,11 +81,12 @@ public class Game {
 
                 }
 
-
+                display.deleteActionBar();
            //RandomMonsterSkills.getRandomMonsterSkill(player,monsters[monsterCounter]);
            Thread.sleep(2000);
 
            monsters[monsterCounter].stopBlocking();
+
 
            if(monsters[monsterCounter].isDead()){
                if(monsterCounter == 3){
@@ -90,6 +94,7 @@ public class Game {
                    break;
                }
 
+               display.deleteSoldierNormal();
                monsterCounter +=1;
                System.out.println("\n" + "a wild monster appeared");
                Thread.sleep(1000);
@@ -116,4 +121,6 @@ public class Game {
 
 
     }
+
+
 }
