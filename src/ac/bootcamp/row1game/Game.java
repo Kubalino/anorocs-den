@@ -53,13 +53,14 @@ public class Game {
             k.setIsPressed();
 
             while(!k.getIsPressed()) {
-                Thread.sleep(500);
-            }
+             //   Thread.sleep(500);
+                display.drawPlayerIdle();
 
+            }
                 switch (k.getKeyPressed()) {
                     case "1":
                         player.attack(monsters[monsterCounter]);
-                        display.drawGunshot();
+                        display.drawPlayerAttack();
                         break;
                     case "2":
                        player.spell(monsters[monsterCounter]);
