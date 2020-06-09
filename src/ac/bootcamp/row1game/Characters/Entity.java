@@ -20,6 +20,8 @@ public abstract class Entity implements Skills {
     private boolean blocking;
     private int baseDamage;
     private Picture[] sprite;
+    private boolean isCharching = false;
+    private int strongLeft;
 
     public Entity(EntityType entity) {
         this.health = entity.getHealth();
@@ -31,6 +33,7 @@ public abstract class Entity implements Skills {
         this.dead = false;
         this.blocking = false;
         this.baseDamage = entity.getDamage();
+        this.strongLeft = 3;
     }
 
     @Override
@@ -68,11 +71,51 @@ public abstract class Entity implements Skills {
         System.out.println("MISS!");
         return;
     }
+    public boolean getIsCharching(){
+        return isCharching;
+    }
+    public void setIsCharching(boolean change){
+        isCharching = change;
+    }
+
+    public int getStrongLeft(){
+        return strongLeft;
+    }
+
+
+    @Override
+    public void strongAttack(Entity monster,Entity target){
+
+        int damage = 75 * (monster.getLevel());
+        if(monster instanceof Player){
+            damage = Randomizer.getRandom(30*monster.getLevel(),75*monster.getLevel());
+        }
+
+        if(getIsCharching()) {
+            if (Math.random() < getHIT_CHANCE()) {
+                System.out.println("HUGE DAMAGE");
+                target.hit(damage);
+                }
+
+                strongLeft -=1;
+            isCharching = false;
+            return;
+        }
+
+        System.out.println("THE ENEMY IS STORING POWER");
+        isCharching = true;
+        return;
+
+    }
 
     @Override
     public void block() {
 
         this.blocking = true;
+    }
+
+    public int getMaxHP(){
+        return maxHP;
     }
 
     @Override
@@ -91,6 +134,7 @@ public abstract class Entity implements Skills {
         potionAvailable -= 1;
     }
 
+
     public void getHeal() {
 
     }
@@ -108,8 +152,8 @@ public abstract class Entity implements Skills {
 
         if (blocking) {
             if (!(damage == 0)) {
-                System.out.println(("Attack blocked!"));
-                damage = 0;
+                System.out.println(("Attack blocked! " + damage));
+                damage = (int)(damage / 4);
             }
 
         }

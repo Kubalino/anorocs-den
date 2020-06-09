@@ -52,6 +52,7 @@ public class Game {
 
             k.setIsPressed();
 
+            if(!player.getIsCharching()) {
             while(!k.getIsPressed()) {
              //   Thread.sleep(500);
                 display.drawPlayerIdle();
@@ -63,17 +64,24 @@ public class Game {
                         display.drawPlayerAttack();
                         break;
                     case "2":
-                       player.spell(monsters[monsterCounter]);
+                        player.spell(monsters[monsterCounter]);
                         break;
                     case "3":
-                       if(player.getPotionAvailable() == 0){
-                           System.out.println("no more pots");
-                       continue;
-                       }
-                       player.heal();
+                        if (player.getPotionAvailable() == 0) {
+                            System.out.println("no more pots");
+                            continue;
+                        }
+                        player.heal();
                         break;
                     case "4":
                         player.block();
+                        break;
+                    case "5":
+                        if (player.getStrongLeft() == 0) {
+                            System.out.println("no more charges");
+                            continue;
+                        }
+                        player.strongAttack(player, monsters[monsterCounter]);
                         break;
 
                     default:
@@ -81,6 +89,7 @@ public class Game {
                         continue;
 
                 }
+            }else{player.strongAttack(player, monsters[monsterCounter]);}
 
                 display.deleteActionBar();
            //RandomMonsterSkills.getRandomMonsterSkill(player,monsters[monsterCounter]);

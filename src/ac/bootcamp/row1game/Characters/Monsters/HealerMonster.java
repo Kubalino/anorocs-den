@@ -10,7 +10,7 @@ public class HealerMonster extends Entity {
     }
 
     public void heal() {
-        super.heal(30, 80);
+        super.heal(100,200);
     }
 
     @Override

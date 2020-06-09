@@ -1,5 +1,7 @@
 package ac.bootcamp.row1game.Characters;
 
+import ac.bootcamp.row1game.Randomizer;
+
 public class Player extends Entity {
 
     public Player() {
@@ -7,8 +9,12 @@ public class Player extends Entity {
     }
 
     public void heal() {
-        super.heal(50, 100);
+
+        int min = 50 * getLevel();
+        int max = 100 * getLevel();
+        super.heal(min, max);
     }
+
 
     @Override
     public void getHeal(){

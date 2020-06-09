@@ -4,6 +4,8 @@ import ac.bootcamp.row1game.Characters.Entity;
 
 public interface Skills {
 
+    void strongAttack(Entity monster,Entity target);
+
     void attack(Entity target);
 
     void block();

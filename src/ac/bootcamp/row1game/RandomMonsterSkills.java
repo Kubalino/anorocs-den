@@ -10,15 +10,26 @@ public class RandomMonsterSkills {
 
     public static void getRandomMonsterSkill(Entity monster, Entity player) {
 
-        double heal_chance = 0.45;
-        double block_chance = 0.20;
-        double spell_chance = 0.10;
+        double heal_chance = 0.50;
+        double block_chance = 0.30;
+        double spell_chance = 0.20;
+        double strongAttack_chance = 0.10;
 
         double random = Math.random();
 
         if(monster instanceof HealerMonster) {
-            heal_chance = 0.5;
+            if((monster.getHealth() <= (monster.getMaxHP()/2)) && monster.getPotionAvailable() != 0){
+                monster.getHeal();
+                return;
+
+            }
+            heal_chance = 0.0;
             block_chance = 0.2;
+        }
+        if((random <= strongAttack_chance)|| monster.getIsCharching()){
+            System.out.println("STRONG");
+            monster.strongAttack(monster, player);
+            return;
         }
 
         if(random <= spell_chance) {
