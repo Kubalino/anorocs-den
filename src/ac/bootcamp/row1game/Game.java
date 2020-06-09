@@ -67,21 +67,21 @@ public class Game {
                         player.spell(monsters[monsterCounter]);
                         break;
                     case "3":
-                        if (player.getPotionAvailable() == 0) {
-                            System.out.println("no more pots");
-                            continue;
-                        }
-                        player.heal();
-                        break;
-                    case "4":
-                        player.block();
-                        break;
-                    case "5":
                         if (player.getStrongLeft() == 0) {
                             System.out.println("no more charges");
                             continue;
                         }
                         player.strongAttack(player, monsters[monsterCounter]);
+                        break;
+                    case "4":
+                        player.block();
+                        break;
+                    case "5":
+                        if (player.getPotionAvailable() == 0) {
+                            System.out.println("no more pots");
+                            continue;
+                        }
+                        player.heal();
                         break;
 
                     default:
