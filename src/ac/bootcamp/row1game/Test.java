@@ -1,4 +1,4 @@
-package ac.bootcamp.row1game;
+/*package ac.bootcamp.row1game;
 
 
 import ac.bootcamp.row1game.Characters.Entity;
@@ -92,7 +92,6 @@ public class Test {
         RandomMonsterSkills.getRandomMonsterSkill(monster3,player);
         RandomMonsterSkills.getRandomMonsterSkill(monster3,player);
         RandomMonsterSkills.getRandomMonsterSkill(monster3,player);
-        */
 
         Game game = new Game();
         game.start();
@@ -101,3 +100,5 @@ public class Test {
 
 
 }
+
+*/
