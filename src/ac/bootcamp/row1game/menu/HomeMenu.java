@@ -20,6 +20,8 @@ public class HomeMenu implements KeyboardHandler {
 	private Button buttonExit;
 	private Button buttonInstruction;
 	private Picture backgroundSky;
+	private Picture bat;
+	private Picture cloud;
 
 	public HomeMenu() {
 		keyboard = new Keyboard(this);
@@ -35,6 +37,12 @@ public class HomeMenu implements KeyboardHandler {
 		
 		mountains = new Picture(rectangleSky.getX(),rectangleSky.getY(),"assets/mainMenu/background/mountains.png");
 		mountains.draw();
+		
+		cloud = new Picture(500,300,"assets/mainMenu/actors/cloud.png");
+		cloud.draw();
+		
+		bat = new Picture(500,200,"assets/mainMenu/actors/bat.png");
+		bat.draw();
 		
 		pillars = new Picture(rectangleSky.getX(),rectangleSky.getY(),"assets/mainMenu/background/pillars.png");
 		pillars.draw();
