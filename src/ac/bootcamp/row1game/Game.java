@@ -99,15 +99,15 @@ public class Game {
 
 
            if(monsters[monsterCounter].isDead()){
+               display.deleteSoldierNormal();
                if(monsterCounter == 3){
-
                    break;
                }
-
-               display.deleteSoldierNormal();
+               
                monsterCounter +=1;
                System.out.println("\n" + "a wild monster appeared");
                Thread.sleep(1000);
+               display.drawBackground(monsterCounter);
                player.levelUp();
 
                continue;
@@ -122,6 +122,7 @@ public class Game {
         }
 
         if(!player.isDead()){
+            display.drawGameOver();
             System.out.println("you win!");
         }
         if(player.isDead()){
