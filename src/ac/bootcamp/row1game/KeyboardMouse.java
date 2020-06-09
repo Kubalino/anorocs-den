@@ -83,6 +83,10 @@ public class KeyboardMouse implements KeyboardHandler {
         return false;
     }
 
+    public void setIsPressed(){
+        isPressed = false;
+    }
+
 
 
     @Override
