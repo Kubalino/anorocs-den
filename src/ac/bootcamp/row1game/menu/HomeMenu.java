@@ -12,13 +12,16 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 public class HomeMenu implements KeyboardHandler {
 
 	private Keyboard keyboard;
-	private Picture background;
+	private Picture bar;
 	private Rectangle rectangleSky;
-	private Picture ground;
-	private Picture grass;
+	private Picture mountains;
+	private Picture pillars;
 	private Button buttonStart;
 	private Button buttonExit;
 	private Button buttonInstruction;
+	private Picture backgroundSky;
+	private Picture bat;
+	private Picture cloud;
 
 	public HomeMenu() {
 		keyboard = new Keyboard(this);
@@ -28,21 +31,33 @@ public class HomeMenu implements KeyboardHandler {
 		rectangleSky = new Rectangle(10, 10, 1280, 720);
 		rectangleSky.setColor(Color.DARK_GRAY);
 		rectangleSky.fill();
-		//background = new Picture(rectangleSky.getX(), rectangleSky.getY(), "assets/background/GrassLand_Background_1.png");
-		//background.draw();
+		
+		backgroundSky = new Picture(rectangleSky.getX(), rectangleSky.getY(), "assets/mainMenu/background/sky.png");
+		backgroundSky.draw();
+		
+		mountains = new Picture(rectangleSky.getX(),rectangleSky.getY(),"assets/mainMenu/background/mountains.png");
+		mountains.draw();
+		
+		cloud = new Picture(500,300,"assets/mainMenu/actors/cloud.png");
+		cloud.draw();
+		
+		bat = new Picture(500,200,"assets/mainMenu/actors/bat.png");
+		bat.draw();
+		
+		pillars = new Picture(rectangleSky.getX(),rectangleSky.getY(),"assets/mainMenu/background/pillars.png");
+		pillars.draw();
+		
+		bar = new Picture(rectangleSky.getX(),rectangleSky.getY(),"assets/mainMenu/background/bar.png");
+		bar.draw();
+		
 
-		//ground = new Picture(rectangleSky.getX(), rectangleSky.getY(), "assets/background/GrassLand_Background_2.png");
-		//ground.draw();
-		//grass = new Picture(rectangleSky.getX(), rectangleSky.getY(), "assets/background/GrassLand_Background_3.png");
-		//grass.draw();
-
-		buttonStart = new ButtonStart(10, 10, "assets/background/buttonStart.png");
+		buttonStart = new ButtonStart(500, 612, "assets/mainMenu/buttons/buttonStart.png");
 		drawAndRegisterButton(buttonStart);
 
-		buttonExit = new ButtonExit(10, 111, "assets/background/buttonExit.png");
+		buttonExit = new ButtonExit(900, 612, "assets/mainMenu/buttons/buttonExit.png");
 		drawAndRegisterButton(buttonExit);
 	
-		buttonInstruction = new ButtonInstructions(10, 212, "assets/background/buttonInfo.png");	
+		buttonInstruction = new ButtonInstructions(250, 612, "assets/mainMenu/buttons/buttonInfo.png");	
 		drawAndRegisterButton(buttonInstruction);
 
 	}
