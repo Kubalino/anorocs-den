@@ -29,7 +29,6 @@ public abstract class Entity implements Skills {
         this.potionAvailable = 3;
         this.level = 1;
         this.defense = entity.getDefense();
-        this.sprite = entity.getSprite();
         this.dead = false;
         this.blocking = false;
         this.baseDamage = entity.getDamage();

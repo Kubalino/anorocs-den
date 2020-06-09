@@ -11,7 +11,6 @@ public class Display {
     private Picture actionBar;
     private Picture player;
     private Picture soldierNormal;
-    private Picture soldierArmoured;
     private Text text;
 
     public Display() {
@@ -21,8 +20,6 @@ public class Display {
         actionBar = new Picture(228, 520, ACTION_BAR);
         player = new Picture(100, 150, PLAYER);
         soldierNormal = new Picture(450, 100, SOLDIER_NORMAL);
-        soldierArmoured = new Picture(450, 100, SOLDIER_ARMOURED);
-
     }
 
     public void init() {
@@ -59,10 +56,11 @@ public class Display {
         player.delete();
         actionBar.delete();
         background.load(BACKGROUND_5);
+
         Thread.sleep(2000);
-        text = new Text(300, 100,"You have defeated all monsters!!!");
+        text = new Text(300, 100,"You defeated all monsters!");
         text.setColor(Color.WHITE);
-        text.grow(100,100);
+        text.grow(100,50);
         text.draw();
         Thread.sleep(2000);
         text = new Text(300, 200,"The world is safe again.");
@@ -80,6 +78,7 @@ public class Display {
         text.grow(100,50);
         text.draw();
         Thread.sleep(2000);
+
 
     }
 
