@@ -48,6 +48,8 @@ public class Game {
             System.out.println("\n" + "Player turn : " + player.getHealth());
             //input part
 
+            k.setIsPressed();
+
             while(!k.getIsPressed()) {
                 Thread.sleep(500);
             }
