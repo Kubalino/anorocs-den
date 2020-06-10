@@ -2,6 +2,8 @@ package ac.bootcamp.row1game.menu;
 
 import org.academiadecodigo.simplegraphics.graphics.Canvas;
 
+import java.util.Random;
+
 public class Actor extends AnimatedPicture {
 
 	private double speed;
@@ -25,10 +27,7 @@ public class Actor extends AnimatedPicture {
 	}
 
 	private void changeToRandomActor() {
-		ActorType randomType = ActorType.BAT;
-		if(Math.random() < 0.5) {
-			randomType = ActorType.CLOUD;
-		}
+		ActorType randomType = ActorType.random();
 		changeToType(randomType);
 	}
 
@@ -47,7 +46,8 @@ public class Actor extends AnimatedPicture {
 
 	public enum ActorType {
 		BAT(-0.0003d, "mainMenu/actors/bat/bat_0.png", "mainMenu/actors/bat/bat_1.png", "mainMenu/actors/bat/bat_2.png","mainMenu/actors/bat/bat_1.png"),
-		CLOUD(-0.00003d, "mainMenu/actors/cloud.png");
+		CLOUD(-0.00003d, "mainMenu/actors/cloud.png"),
+		DRAGON(-0.0003d,"mainMenu/actors/dragon/dragon_0.png","mainMenu/actors/dragon/dragon_1.png","mainMenu/actors/dragon/dragon_2.png","mainMenu/actors/dragon/dragon_1.png");
 
 		private double speed;
 		private String[] frames;
@@ -64,5 +64,12 @@ public class Actor extends AnimatedPicture {
 		public double getSpeed() {
 			return speed;
 		}
+		
+		public static ActorType random() {
+			ActorType[] actorType = ActorType.values();
+			Random random = new Random();
+			return actorType[random.nextInt(actorType.length)];
+		}
+		
 	}
 }

@@ -33,7 +33,7 @@ public class VisualSector {
 
 	private void createRandomActors() {
 		for(int i = 0; i < actors.length; i++) {
-			ActorType randomActorType = Math.random() > 0.5 ? ActorType.BAT : ActorType.CLOUD;
+			ActorType randomActorType = ActorType.random();
 			double randomX = Math.random() * rectangleSky.getWidth();
 			double randomY = Math.random() * rectangleSky.getHeight();
 			actors[i] = new Actor(randomX, randomY, randomActorType);
