@@ -5,6 +5,9 @@ import ac.bootcamp.row1game.menu.ButtonExit;
 import ac.bootcamp.row1game.menu.ButtonInstructions;
 import ac.bootcamp.row1game.menu.ButtonStart;
 import ac.bootcamp.row1game.menu.HomeMenu;
+import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
+import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
+import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.mouse.Mouse;
 import org.academiadecodigo.simplegraphics.mouse.MouseEventType;
 
@@ -58,6 +61,11 @@ public class InputSector {
 		button.draw();
 		Mouse mouse = new Mouse(button);
 		mouse.addEventListener(MouseEventType.MOUSE_CLICKED);
+		Keyboard keyboard = new Keyboard(button);
+		KeyboardEvent keyboardEvent = new KeyboardEvent();
+		keyboardEvent.setKey(button.getKey());
+		keyboardEvent.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+		keyboard.addEventListener(keyboardEvent);
 		//		mouse.addEventListener(MouseEventType.MOUSE_MOVED);
 	}
 }

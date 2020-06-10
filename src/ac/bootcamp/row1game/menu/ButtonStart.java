@@ -1,6 +1,7 @@
 package ac.bootcamp.row1game.menu;
 
 import ac.bootcamp.row1game.Game;
+import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.mouse.MouseEvent;
 
 public class ButtonStart extends Button {
@@ -45,5 +46,10 @@ public class ButtonStart extends Button {
 				}
 			}
 		}.start();
+	}
+
+	@Override
+	public int getKey() {
+		return KeyboardEvent.KEY_SPACE;
 	}
 }

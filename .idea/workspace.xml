@@ -1,79 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="859e615c-7bc6-4e7e-9e19-511393be21a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
+    <list default="true" id="d71a1bc2-4b95-48bb-acfa-6336fe9d4741" name="Default Changelist" comment="Added animatedPicture prototype">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/EntityType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/EntityType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Factory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Monsters/ArmouredMonster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Monsters/ArmouredMonster.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Monsters/HealerMonster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Monsters/HealerMonster.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Monsters/HighDamageMonster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Monsters/HighDamageMonster.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Monsters/NormalMonster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Monsters/NormalMonster.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/RandomMonsterSkills.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/RandomMonsterSkills.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Randomizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Randomizer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Skills.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Skills.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Monsters/ArmouredMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Monsters/ArmouredMonster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Monsters/HealerMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Monsters/HealerMonster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Monsters/HighDamageMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Monsters/HighDamageMonster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Monsters/NormalMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Monsters/NormalMonster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/row1game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/row1game.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/ButtonStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/ButtonStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/HomeMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/HomeMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/sectors/VisualSector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/sectors/VisualSector.java" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectId" id="1d6TpUQsugzjFnQGoAWS4XaKWpe" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
+  <component name="ProjectId" id="1d7pVTvgyy3hK2g0ZNRhWSMHcEh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591742837807" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.xml" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591732393922" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\queuecumbers\groupGame\row1game\resources\mainMenu" />
+      <recent name="$PROJECT_DIR$/resources/sprites/action bar" />
+      <recent name="$PROJECT_DIR$/assets/background" />
+      <recent name="$PROJECT_DIR$/assets/sprites" />
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ac.bootcamp.row1game.Main" />
       <module name="row1game" />
@@ -87,14 +75,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="row1game.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/build/row1game.jar" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JAR Application.row1game.jar" />
       </list>
     </recent_temporary>
   </component>
@@ -103,17 +86,74 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="859e615c-7bc6-4e7e-9e19-511393be21a7" name="Default Changelist" comment="" />
-      <created>1591741255024</created>
+      <changelist id="d71a1bc2-4b95-48bb-acfa-6336fe9d4741" name="Default Changelist" comment="" />
+      <created>1591726155188</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1591741255024</updated>
-      <workItem from="1591741257435" duration="1455000" />
+      <updated>1591726155188</updated>
+      <workItem from="1591726156751" duration="1755000" />
+      <workItem from="1591728173533" duration="4517000" />
+      <workItem from="1591786026172" duration="4760000" />
+      <workItem from="1591792483538" duration="12539000" />
     </task>
+    <task id="LOCAL-00001" summary="Restored buttons">
+      <created>1591736742531</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591736742531</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added animatedPicture prototype">
+      <created>1591788024234</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591788024234</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Adapted actor to the animated picture">
+      <created>1591788469856</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591788469856</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added bat">
+      <created>1591790359615</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591790359615</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Cleanup code">
+      <created>1591790765950</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591790765950</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Cleanup code">
+      <created>1591790779853</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1591790779853</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Cleanup code">
+      <created>1591790793770</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1591790793770</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Connected button start with game">
+      <created>1591807647197</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1591807647197</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1455000" />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -121,51 +161,48 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="249" y="0" key="#Project_Structure" timestamp="1591744799925">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1591744799925" />
-    <state x="537" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1591795411753">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="537" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1591795411753" />
-    <state x="445" y="122" key="FileChooserDialogImpl" timestamp="1591745057462">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="445" y="122" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591745057462" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1591796926587">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591796926587" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1591796926587">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591796926587" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1591796926587">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591796926587" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1591796926587">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591796926587" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1591792652008">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591792652008" />
-    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591792643812">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1591792643812" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Restored buttons" />
+    <MESSAGE value="Adapted actor to the animated picture" />
+    <MESSAGE value="Added bat" />
+    <MESSAGE value="Added animatedPicture prototype" />
+    <MESSAGE value="Cleanup code" />
+    <MESSAGE value="Connected button start with game" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connected button start with game" />
   </component>
 </project>
