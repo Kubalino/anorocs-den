@@ -12,7 +12,7 @@ public class VisualSector {
 	//private Picture mountains;
 	private Picture pillars;
 	private Picture backgroundSky;
-	private final Actor[] actors = new Actor[5];
+	private final Actor[] actors = new Actor[10];
 
 	public void init() {
 		rectangleSky = new Rectangle(10, 10, 1280, 720);
@@ -34,8 +34,8 @@ public class VisualSector {
 	private void createRandomActors() {
 		for(int i = 0; i < actors.length; i++) {
 			ActorType randomActorType = ActorType.random();
-			double randomX = Math.random() * rectangleSky.getWidth();
-			double randomY = Math.random() * rectangleSky.getHeight();
+			double randomX = Math.random() * (rectangleSky.getWidth() - 100) ;
+			double randomY = Math.random() * (rectangleSky.getHeight() - 100);
 			actors[i] = new Actor(randomX, randomY, randomActorType);
 			actors[i].draw();
 		}

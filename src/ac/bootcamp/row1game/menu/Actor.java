@@ -22,7 +22,7 @@ public class Actor extends AnimatedPicture {
 	public void repaint() {
 		super.repaint();
 
-		translate(speed, 0d);
+		translate(speed * 10, 0d);
 		if(isOutsideMap()) {
 			changeToRandomActor();
 			resetPosition();
@@ -36,7 +36,7 @@ public class Actor extends AnimatedPicture {
 	}
 
 	private void resetPosition() {
-		setPosition(1200, 100 + (Math.random() * 200));
+		setPosition(1120, 100 + (Math.random() * 200));
 	}
 
 	public boolean isOutsideMap() {
