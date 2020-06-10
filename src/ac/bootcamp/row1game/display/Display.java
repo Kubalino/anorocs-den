@@ -1,5 +1,6 @@
 package ac.bootcamp.row1game.display;
 
+import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Text;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 import static ac.bootcamp.row1game.display.Sprites.*;
@@ -10,17 +11,15 @@ public class Display {
     private Picture actionBar;
     private Picture player;
     private Picture soldierNormal;
-    private Picture soldierArmoured;
     private Text text;
 
     public Display() {
 
         // TODO: Change magic number into variables depending on image size
-        background = new Picture(10, 10, BACKGROUND);
+        background = new Picture(10, 10, BACKGROUND_1);
         actionBar = new Picture(228, 520, ACTION_BAR);
         player = new Picture(100, 150, PLAYER);
         soldierNormal = new Picture(450, 100, SOLDIER_NORMAL);
-        soldierArmoured = new Picture(450, 100, SOLDIER_ARMOURED);
     }
 
     public void init() {
@@ -43,18 +42,46 @@ public class Display {
         soldierNormal.delete();
     }
 
-    public void drawSoldierArmoured() {
-
-        soldierArmoured.load(SOLDIER_ARMOURED);
-        soldierArmoured.draw();
+    public void drawBackground(int bg) {
+        switch (bg){
+            case 1: background.load(BACKGROUND_2); break;
+            case 2: background.load(BACKGROUND_3); break;
+            case 3: background.load(BACKGROUND_4); break;
+        }
     }
 
-    public void deleteSoldierArmoured() throws InterruptedException {
 
-        soldierArmoured.load(SOLDIER_DEAD);
-        Thread.sleep(1000);
-        soldierArmoured.delete();
+
+    public void drawGameOver() throws InterruptedException{
+        player.delete();
+        actionBar.delete();
+        background.load(BACKGROUND_5);
+
+        Thread.sleep(2000);
+        text = new Text(300, 100,"You defeated all monsters!");
+        text.setColor(Color.WHITE);
+        text.grow(100,50);
+        text.draw();
+        Thread.sleep(2000);
+        text = new Text(300, 200,"The world is safe again.");
+        text.setColor(Color.WHITE);
+        text.grow(100,50);
+        text.draw();
+        Thread.sleep(2000);
+        text = new Text(300, 300,"Suddenly you die!!!");
+        text.setColor(Color.WHITE);
+        text.grow(100,50);
+        text.draw();
+        Thread.sleep(2000);
+        text = new Text(300, 400,"You could not defeat COVID-19");
+        text.setColor(Color.WHITE);
+        text.grow(100,50);
+        text.draw();
+        Thread.sleep(2000);
+
+
     }
+
 
     public void drawPlayerAttack() throws InterruptedException {
 

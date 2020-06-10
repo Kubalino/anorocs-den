@@ -45,6 +45,11 @@ public class KeyboardMouse implements KeyboardHandler {
         inputFour.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
         keyboard.addEventListener(inputFour);
 
+        KeyboardEvent inputFive = new KeyboardEvent();
+        inputFive.setKey(KeyboardEvent.KEY_5);
+        inputFive.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        keyboard.addEventListener(inputFive);
+
         KeyboardEvent inputSpace = new KeyboardEvent();
         inputSpace.setKey(KeyboardEvent.KEY_SPACE);
         inputSpace.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
@@ -107,6 +112,10 @@ public class KeyboardMouse implements KeyboardHandler {
 
             case KeyboardEvent.KEY_4:
                 keyPressed="4";
+                break;
+
+            case KeyboardEvent.KEY_5:
+                keyPressed="5";
                 break;
 
             case KeyboardEvent.KEY_SPACE:

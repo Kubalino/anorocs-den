@@ -16,9 +16,9 @@ public class Game {
 
     public Game() {
 
-       this.display = new Display();
+        this.display = new Display();
 
-      this.player = Factory.createPlayer();
+        this.player = Factory.createPlayer();
         this.monsters = new Entity[4];
         monsters[0] = Factory.createNormalMonster();
         monsters[1] = Factory.createArmouredMonster();
@@ -45,13 +45,14 @@ public class Game {
         while(!player.isDead()){
 
 
-            System.out.println("\n" + "Player turn : " + player.getHealth());
+            System.out.println("\n" + player.toString());
             //input part
             display.drawActionBar();
             display.drawSoldierNormal();
 
             k.setIsPressed();
 
+            if(!player.getIsCharching()) {
             while(!k.getIsPressed()) {
              //   Thread.sleep(500);
                 display.drawPlayerIdle();
@@ -63,17 +64,24 @@ public class Game {
                         display.drawPlayerAttack();
                         break;
                     case "2":
-                       player.spell(monsters[monsterCounter]);
+                        player.spell(monsters[monsterCounter]);
                         break;
                     case "3":
-                       if(player.getPotionAvailable() == 0){
-                           System.out.println("no more pots");
-                       continue;
-                       }
-                       player.heal();
+                        if (player.getStrongLeft() == 0) {
+                            System.out.println("no more charges");
+                            continue;
+                        }
+                        player.strongAttack(player, monsters[monsterCounter]);
                         break;
                     case "4":
                         player.block();
+                        break;
+                    case "5":
+                        if (player.getPotionAvailable() == 0) {
+                            System.out.println("no more pots");
+                            continue;
+                        }
+                        player.heal();
                         break;
 
                     default:
@@ -81,6 +89,7 @@ public class Game {
                         continue;
 
                 }
+            }else{player.strongAttack(player, monsters[monsterCounter]);}
 
                 display.deleteActionBar();
            //RandomMonsterSkills.getRandomMonsterSkill(player,monsters[monsterCounter]);
@@ -90,20 +99,21 @@ public class Game {
 
 
            if(monsters[monsterCounter].isDead()){
+               display.deleteSoldierNormal();
                if(monsterCounter == 3){
-
                    break;
                }
-
-               display.deleteSoldierNormal();
+               
                monsterCounter +=1;
-               System.out.println("\n" + "a wild monster appeared");
+               System.out.println("\n" + "a wild " + monsters[monsterCounter].getEntityType()
+                       + " appeared...");
                Thread.sleep(1000);
-               player.levelUp();
+               display.drawBackground(monsterCounter);
+               player.levelUpSout();
 
                continue;
            }
-            System.out.println( "\n" + "monster turn : " + monsters[monsterCounter].getHealth());
+            System.out.println( "\n"  + monsters[monsterCounter].toString());
 
            RandomMonsterSkills.getRandomMonsterSkill(monsters[monsterCounter],player);
            Thread.sleep(2000);
@@ -113,12 +123,12 @@ public class Game {
         }
 
         if(!player.isDead()){
-            System.out.println("you win!");
+            display.drawGameOver();
+            System.out.println("You win!");
         }
         if(player.isDead()){
             System.out.println("Game over!");
         }
-
 
 
     }

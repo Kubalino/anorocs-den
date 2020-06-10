@@ -1,156 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d71a1bc2-4b95-48bb-acfa-6336fe9d4741" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Exercicio1/src/Pessoa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/mainMenu/actors/bat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/mainMenu/actors/cloud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/mainMenu/background/bar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/mainMenu/background/mountains.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/mainMenu/background/pillars.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/mainMenu/background/sky.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/background/buttonExit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/background/buttonInfo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/background/buttonStart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/mainMenu/buttons/buttonExit.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/mainMenu/buttons/buttonExit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/mainMenu/buttons/buttonInfo.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/mainMenu/buttons/buttonInfo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/mainMenu/buttons/buttonStart.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/mainMenu/buttons/buttonStart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/HomeMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/HomeMenu.java" afterDir="false" />
+    <list default="true" id="859e615c-7bc6-4e7e-9e19-511393be21a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/EntityType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/EntityType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Factory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Monsters/ArmouredMonster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Monsters/ArmouredMonster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Monsters/HealerMonster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Monsters/HealerMonster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Monsters/HighDamageMonster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Monsters/HighDamageMonster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Monsters/NormalMonster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Monsters/NormalMonster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Characters/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/RandomMonsterSkills.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/RandomMonsterSkills.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Randomizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Randomizer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Skills.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/row1game/ac/bootcamp/row1game/Skills.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Monsters/ArmouredMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Monsters/ArmouredMonster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Monsters/HealerMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Monsters/HealerMonster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Monsters/HighDamageMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Monsters/HighDamageMonster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Monsters/NormalMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Monsters/NormalMonster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/Game.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1445388756">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="2" />
-          <entry key="gitignore" value="1" />
-          <entry key="java" value="25" />
-          <entry key="jpg" value="2" />
-          <entry key="png" value="59" />
-          <entry key="txt" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="2" />
-          <entry key="Image" value="61" />
-          <entry key="JAVA" value="25" />
-          <entry key="PLAIN_TEXT" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="272" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="272" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="55" column="15" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/EntityType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/display/Display.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2583#2584#0" expanded="true" />
-                <element signature="e#2615#2616#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/HomeMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-114">
-              <caret line="56" column="71" selection-start-line="56" selection-start-column="71" selection-end-line="56" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/background/background_0.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/display/Sprites.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/EntityType.java" />
-        <option value="$PROJECT_DIR$/src/ac/bootcamp/row1game/Test.java" />
-        <option value="$PROJECT_DIR$/src/ac/bootcamp/row1game/display/Sprites.java" />
-        <option value="$PROJECT_DIR$/src/ac/bootcamp/row1game/Game.java" />
-        <option value="$PROJECT_DIR$/src/ac/bootcamp/row1game/display/Display.java" />
-      </list>
-    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -158,133 +57,23 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="977" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="row1game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="row1game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="row1game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="row1game" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="row1game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="row1game" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="background" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="row1game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="row1game" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mainMenu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="row1game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="row1game" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mainMenu" type="462c0819:PsiDirectoryNode" />
-              <item name="actors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="row1game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="row1game" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mainMenu" type="462c0819:PsiDirectoryNode" />
-              <item name="background" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="row1game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="row1game" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mainMenu" type="462c0819:PsiDirectoryNode" />
-              <item name="buttons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="row1game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="row1game" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="row1game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="row1game" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="row1game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="row1game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="row1game" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="row1game" type="462c0819:PsiDirectoryNode" />
-              <item name="display" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="row1game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="row1game" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="row1game" type="462c0819:PsiDirectoryNode" />
-              <item name="gameDisplay" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="row1game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="row1game" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="row1game" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectId" id="1d6TpUQsugzjFnQGoAWS4XaKWpe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591732393922" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591742837807" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/sprites/action bar" />
-      <recent name="$PROJECT_DIR$/assets/background" />
-      <recent name="$PROJECT_DIR$/assets/sprites" />
-      <recent name="$PROJECT_DIR$/assets" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ac.bootcamp.row1game.Main" />
       <module name="row1game" />
@@ -298,9 +87,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="row1game.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/build/row1game.jar" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JAR Application.row1game.jar" />
       </list>
     </recent_temporary>
   </component>
@@ -309,325 +103,69 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d71a1bc2-4b95-48bb-acfa-6336fe9d4741" name="Default Changelist" comment="" />
-      <created>1591726155188</created>
+      <changelist id="859e615c-7bc6-4e7e-9e19-511393be21a7" name="Default Changelist" comment="" />
+      <created>1591741255024</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1591726155188</updated>
-      <workItem from="1591726156751" duration="1755000" />
-      <workItem from="1591728173533" duration="4517000" />
+      <updated>1591741255024</updated>
+      <workItem from="1591741257435" duration="1455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6272000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="977" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25239617" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3299435" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3299435" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3299435" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
-    </layout>
+    <option name="totallyTimeSpent" value="1455000" />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hello_group.txt" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.desktop/javax/imageio/ImageIO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="1307" selection-start-line="1307" selection-end-line="1307" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/simple-graphics.jar!/org/academiadecodigo/simplegraphics/pictures/Picture.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/entity's images/m2 3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/entity's images/m2 4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/entity's images/m3 2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/entity's images/m3 4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/atack  spell images/spell 5.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/crit block heal images/shield.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/entity's images/m4 1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/crit block heal images/crit.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/entity's images/m2 1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sprites/old_game_logic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1288">
-          <caret line="64" column="54" lean-forward="true" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2046">
-          <caret line="93" column="67" selection-start-line="93" selection-start-column="67" selection-end-line="93" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/atack  spell images/atack 1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/atack  spell images/atack 2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/atack  spell images/atack 3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/atack  spell images/spell 1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/atack  spell images/spell 2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/atack  spell images/spell 4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/atack  spell images/atack 4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/soldier_normal.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/soldier_dead.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/soldier_armoured.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/entity's images/player_idle_3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/entity's images/player_idle_4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/entity's images/player_idle_2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/entity's images/player_idle_1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/entity's images/m1 4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/entity's images/m1 3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/entity's images/m1 2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/entity's images/m1 1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/crit block heal images/heal.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3084">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/gameDisplay/MainDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/ButtonStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/ButtonInstructions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/Button.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/Characters/EntityType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/action bar/action_bar.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/action bar/action_bar_tmp.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/display/Sprites.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="55" column="15" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/display/Display.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2583#2584#0" expanded="true" />
-            <element signature="e#2615#2616#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/HomeMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <caret line="56" column="71" selection-start-line="56" selection-start-column="71" selection-end-line="56" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/background/buttonStart.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/background/buttonInfo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/background/buttonExit.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/background/background_0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>10</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>10</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="WindowStateProjectService">
+    <state x="249" y="0" key="#Project_Structure" timestamp="1591744799925">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1591744799925" />
+    <state x="537" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1591795411753">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="537" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1591795411753" />
+    <state x="445" y="122" key="FileChooserDialogImpl" timestamp="1591745057462">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="445" y="122" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591745057462" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1591796926587">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591796926587" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1591796926587">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591796926587" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1591796926587">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591796926587" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1591796926587">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591796926587" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1591792652008">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591792652008" />
+    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591792643812">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1591792643812" />
   </component>
 </project>

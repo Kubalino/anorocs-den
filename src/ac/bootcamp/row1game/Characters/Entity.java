@@ -1,9 +1,8 @@
 package ac.bootcamp.row1game.Characters;
 
-import ac.bootcamp.row1game.RandomMonsterSkills;
 import ac.bootcamp.row1game.Skills;
 import ac.bootcamp.row1game.Randomizer;
-import org.academiadecodigo.simplegraphics.pictures.Picture;
+
 
 public abstract class Entity implements Skills {
 
@@ -19,7 +18,8 @@ public abstract class Entity implements Skills {
     private boolean dead;
     private boolean blocking;
     private int baseDamage;
-    private Picture[] sprite;
+    private boolean isCharging = false;
+    private int strongLeft;
 
     public Entity(EntityType entity) {
         this.health = entity.getHealth();
@@ -27,10 +27,10 @@ public abstract class Entity implements Skills {
         this.potionAvailable = 3;
         this.level = 1;
         this.defense = entity.getDefense();
-        this.sprite = entity.getSprite();
         this.dead = false;
         this.blocking = false;
         this.baseDamage = entity.getDamage();
+        this.strongLeft = 3;
     }
 
     @Override
@@ -39,7 +39,7 @@ public abstract class Entity implements Skills {
 
         if (Math.random() < getHIT_CHANCE()) {
             if(Math.random() < getCRIT_CHANCE() ){
-                System.out.println("CRITICAL");
+                System.out.println("CRITICAL HIT");
                 damage *=2;
             }
             System.out.println("HIT Power: " + damage);
@@ -47,7 +47,7 @@ public abstract class Entity implements Skills {
             return;
         }
         target.hit(0);
-        System.out.println("MISS!");
+        System.out.println("It's a MISS!");
         return;
     }
 
@@ -57,22 +57,63 @@ public abstract class Entity implements Skills {
 
         if(Math.random() < getHIT_CHANCE()) {
             if(Math.random() < getCRIT_CHANCE()){
-                System.out.println("CRITICAL");
+                System.out.print("CRITICAL HIT");
                 damage *=2;
             }
-            System.out.println("SPELL Power: " + damage);
+            System.out.println(getEntityType() + ": Spell Power: " + damage);
             target.hit(damage);
             return;
         }
         target.hit(0);
-        System.out.println("MISS!");
+        System.out.println(getEntityType() + ": It's a MISS!");
         return;
+    }
+    public boolean getIsCharching(){
+        return isCharging;
+    }
+    public void setIsCharching(boolean change){
+        isCharging = change;
+    }
+
+    public int getStrongLeft(){
+        return strongLeft;
+    }
+
+
+    @Override
+    public void strongAttack(Entity monster,Entity target){
+
+        int damage = 75 * (monster.getLevel());
+        if(monster instanceof Player){
+            damage = Randomizer.getRandom(30*monster.getLevel(),75*monster.getLevel());
+        }
+
+        if(getIsCharching()) {
+            if (Math.random() < getHIT_CHANCE()) {
+                System.out.println(getEntityType() + ": HUGE DAMAGE done!");
+                target.hit(damage);
+                }
+
+                strongLeft -=1;
+            isCharging = false;
+            return;
+        }
+
+        System.out.println(monster.getEntityType() +  " is storing power!");
+        isCharging = true;
+        return;
+
     }
 
     @Override
     public void block() {
 
         this.blocking = true;
+        System.out.println(getEntityType() + " activated Block!");
+    }
+
+    public int getMaxHP(){
+        return maxHP;
     }
 
     @Override
@@ -82,14 +123,15 @@ public abstract class Entity implements Skills {
         int random = Randomizer.getRandom(min, max);
 
         if (potionAvailable <= 0) {
-            System.out.println("Out of Healing Potions...");
+            System.out.println(getEntityType() + " is out of Healing Potions...");
             return;
         }
 
         health = (health + random <= maxHP ? health + random : maxHP);
-        System.out.println("Using a " + random + " Healing Potion");
+        System.out.println(getEntityType() + ": Using a " + random + " Healing Potion");
         potionAvailable -= 1;
     }
+
 
     public void getHeal() {
 
@@ -108,8 +150,8 @@ public abstract class Entity implements Skills {
 
         if (blocking) {
             if (!(damage == 0)) {
-                System.out.println(("Attack blocked!"));
-                damage = 0;
+                System.out.println(("Attack blocked! " + damage + " damage received!"));
+                damage = (int)(damage / 4);
             }
 
         }
@@ -121,16 +163,23 @@ public abstract class Entity implements Skills {
         }
 
         health = (health - damage <= 0 ? 0 : health - damage);
-        System.out.println("Hit damage: " + damage);
+        System.out.println("HIT Damage: " + damage);
 
         if (health <= 0) {
             dead = true;
-            System.out.println("You dead!");
+            System.out.println(getEntityType() + " is dead!");
         }
     }
 
     public void levelUp() {
+        level += 1;
+        maxHP += 100;
+        health = maxHP;
+        baseDamage += 5;
+        defense += 3;
+    }
 
+    public void levelUpSout() {
         level += 1;
         maxHP += 100;
         health = maxHP;
@@ -163,10 +212,6 @@ public abstract class Entity implements Skills {
         return blocking;
     }
 
-    public Picture[] getSprite() {
-        return sprite;
-    }
-
     public int getLevel() {
         return level;
     }
@@ -182,5 +227,9 @@ public abstract class Entity implements Skills {
                 ", dead=" + dead +
                 ", blocking=" + blocking +
                 '}';
+    }
+
+    public String getEntityType() {
+        return "Monster Type";
     }
 }
