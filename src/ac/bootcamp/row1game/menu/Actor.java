@@ -42,12 +42,27 @@ public class Actor extends AnimatedPicture {
 	}
 
 	public void changeToBat() {
-		initializeFrames("mainMenu/actors/bat.png");
+		initializeFrames(ActorType.BAT.getFrames());
 		speed = BAT_SPEED;
 	}
 
 	public void changeToCloud() {
-		initializeFrames("mainMenu/actors/cloud.png");
+		initializeFrames(ActorType.CLOUD.getFrames());
 		speed = CLOUD_SPEED;
+	}
+	
+	public enum ActorType {
+		BAT("mainMenu/actors/bat/bat_0.png", "mainMenu/actors/bat/bat_1.png", "mainMenu/actors/bat/bat_2.png"),
+		CLOUD("mainMenu/actors/cloud.png");
+
+		private String[] frames;
+
+		ActorType(String... frames) {
+			this.frames = frames;
+		}
+
+		public String[] getFrames() {
+			return frames;
+		}
 	}
 }
