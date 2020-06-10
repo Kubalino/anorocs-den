@@ -21,6 +21,8 @@ public class AnimatedPicture implements Shape, Movable {
 	private double xGrow;
 	private double yGrow;
 	private int timeBetweenFrames;
+	
+	private boolean taggedForDeletion;
 
 	public AnimatedPicture(double x, double y, String... frames) {
 		this(x, y, 160, frames);
@@ -103,12 +105,17 @@ public class AnimatedPicture implements Shape, Movable {
 
 	@Override
 	public void draw() {
-		Canvas.getInstance().show(this);
+		if(!taggedForDeletion) {
+			Canvas.getInstance().show(this);
+		}
 	}
 
 	@Override
 	public void delete() {
-		Canvas.getInstance().hide(this);
+		if(!taggedForDeletion) {
+			Canvas.getInstance().hide(this);
+		}
+		taggedForDeletion = true;
 	}
 
 	@Override

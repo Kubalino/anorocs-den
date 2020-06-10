@@ -5,13 +5,22 @@ import ac.bootcamp.row1game.menu.sectors.VisualSector;
 
 public class HomeMenu {
 
+	private VisualSector visualSector;
+	private InputSector inputSector;
+
 	public void init() {
 
-		VisualSector visualSector = new VisualSector();
-
+		visualSector = new VisualSector();
 		visualSector.init();
-		new InputSector().init(visualSector.getX(), visualSector.getY());
+		
+		inputSector = new InputSector(this);
+		inputSector.init();
+		
 		visualSector.menuLoop();
 	}
 
+	public void destroy() {
+		visualSector.destroy();
+		inputSector.destroy();
+	}
 }

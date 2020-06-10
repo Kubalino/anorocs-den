@@ -6,14 +6,16 @@ import org.academiadecodigo.simplegraphics.mouse.MouseEvent;
 public class ButtonStart extends Button {
 
 	private double originalY;
+	private final HomeMenu homeMenu;
 
-	public ButtonStart(double x, double y, String source) {
+	private long lastUpdate = System.currentTimeMillis();
+
+	public ButtonStart(double x, double y, HomeMenu homeMenu, String source) {
 		super(x, y, source);
 
 		this.originalY = y;
+		this.homeMenu = homeMenu;
 	}
-
-	private long lastUpdate = System.currentTimeMillis();
 
 	@Override
 	public void update() {
@@ -30,7 +32,13 @@ public class ButtonStart extends Button {
 
 	@Override
 	public void processMouseClicked(MouseEvent mouseEvent) {
-		new Game();
-		System.out.println("Loading");
+		homeMenu.destroy();
+		Game game = new Game();
+		try {
+			game.start();
+		} catch(InterruptedException e) {
+			System.out.println("Something went wrong");
+			System.exit(0);
+		}
 	}
 }

@@ -13,6 +13,7 @@ public class VisualSector {
 	private Picture pillars;
 	private Picture backgroundSky;
 	private final Actor[] actors = new Actor[10];
+	private boolean running = true;
 
 	public void init() {
 		rectangleSky = new Rectangle(10, 10, 1280, 720);
@@ -42,13 +43,23 @@ public class VisualSector {
 	}
 
 	public void menuLoop() {
-		while(true) {
+		while(running) {
 			for(Actor actor : actors) {
 				actor.repaint();
 			}
 		}
 	}
-
+	
+	public void destroy() {
+		running = false;
+		rectangleSky.delete();
+		pillars.delete();
+		backgroundSky.delete();
+		for(Actor actor : actors) {
+			actor.delete();
+		}
+	}
+	
 	public int getX() {
 		return rectangleSky.getX();
 	}

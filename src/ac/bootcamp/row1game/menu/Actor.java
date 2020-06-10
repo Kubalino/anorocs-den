@@ -1,7 +1,5 @@
 package ac.bootcamp.row1game.menu;
 
-import org.academiadecodigo.simplegraphics.graphics.Canvas;
-
 import java.util.Random;
 
 public class Actor extends AnimatedPicture {
@@ -22,12 +20,12 @@ public class Actor extends AnimatedPicture {
 	public void repaint() {
 		super.repaint();
 
-		translate(speed * 10, 0d);
+		translate(speed, 0d);
 		if(isOutsideMap()) {
 			changeToRandomActor();
 			resetPosition();
 		}
-		Canvas.getInstance().show(this);
+		draw();
 	}
 
 	private void changeToRandomActor() {
@@ -49,9 +47,9 @@ public class Actor extends AnimatedPicture {
 	}
 
 	public enum ActorType {
-		BAT(-0.0004d, "mainMenu/actors/bat/bat_0.png", "mainMenu/actors/bat/bat_1.png", "mainMenu/actors/bat/bat_2.png","mainMenu/actors/bat/bat_1.png"),
+		BAT(-0.0004d, "mainMenu/actors/bat/bat_0.png", "mainMenu/actors/bat/bat_1.png", "mainMenu/actors/bat/bat_2.png", "mainMenu/actors/bat/bat_1.png"),
 		CLOUD(-0.00003d, "mainMenu/actors/cloud.png"),
-		DRAGON(-0.0003d,"mainMenu/actors/dragon/dragon_0.png","mainMenu/actors/dragon/dragon_1.png","mainMenu/actors/dragon/dragon_2.png","mainMenu/actors/dragon/dragon_1.png");
+		DRAGON(-0.0003d, "mainMenu/actors/dragon/dragon_0.png", "mainMenu/actors/dragon/dragon_1.png", "mainMenu/actors/dragon/dragon_2.png", "mainMenu/actors/dragon/dragon_1.png");
 
 		private double speed;
 		private String[] frames;
@@ -68,12 +66,15 @@ public class Actor extends AnimatedPicture {
 		public double getSpeed() {
 			return speed;
 		}
-		
+
 		public static ActorType random() {
 			ActorType[] actorType = ActorType.values();
 			Random random = new Random();
-			return actorType[random.nextInt(actorType.length)];
+			ActorType actorTypeRandom = actorType[random.nextInt(actorType.length)];
+			if(actorTypeRandom == CLOUD && random.nextBoolean()) {
+				actorTypeRandom = actorType[random.nextInt(actorType.length)];
+			}
+			return actorTypeRandom;
 		}
-		
 	}
 }
