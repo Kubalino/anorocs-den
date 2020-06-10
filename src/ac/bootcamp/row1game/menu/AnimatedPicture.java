@@ -22,6 +22,10 @@ public class AnimatedPicture implements Shape, Movable {
 	private double yGrow;
 	private int timeBetweenFrames;
 
+	public AnimatedPicture(double x, double y, String... frames) {
+		this(x, y, 160, frames);
+	}
+
 	public AnimatedPicture(double x, double y, int timeBetweenFrames, String... frames) {
 		this.x = x;
 		this.y = y;
@@ -29,7 +33,7 @@ public class AnimatedPicture implements Shape, Movable {
 		initializeFrames(frames);
 	}
 
-	private void initializeFrames(String[] frames) {
+	protected void initializeFrames(String... frames) {
 		allFrames = new BufferedImage[frames.length];
 		allFrameIcons = new ImageIcon[allFrames.length];
 		for(int i = 0; i < allFrames.length; i++) {
@@ -60,9 +64,11 @@ public class AnimatedPicture implements Shape, Movable {
 	}
 
 	public void repaint() {
-		long time = System.currentTimeMillis() / timeBetweenFrames;
-		long currentFrame = time % allFrames.length;
-		changeFrame((int) currentFrame);
+		if(allFrames.length > 1) {
+			long time = System.currentTimeMillis() / timeBetweenFrames;
+			long currentFrame = time % allFrames.length;
+			changeFrame((int) currentFrame);
+		}
 		draw();
 	}
 
@@ -80,7 +86,7 @@ public class AnimatedPicture implements Shape, Movable {
 		this.y = yPos;
 		Canvas.getInstance().repaint();
 	}
-	
+
 	@Override
 	public void translate(double dx, double dy) {
 		this.x += dx;
