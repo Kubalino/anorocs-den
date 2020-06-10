@@ -59,13 +59,4 @@ public class VisualSector {
 			actor.delete();
 		}
 	}
-	
-	public int getX() {
-		return rectangleSky.getX();
-	}
-
-	public int getY() {
-		return rectangleSky.getY();
-	}
-
 }

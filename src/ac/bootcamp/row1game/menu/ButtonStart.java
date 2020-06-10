@@ -33,12 +33,17 @@ public class ButtonStart extends Button {
 	@Override
 	public void processMouseClicked(MouseEvent mouseEvent) {
 		homeMenu.destroy();
-		Game game = new Game();
-		try {
-			game.start();
-		} catch(InterruptedException e) {
-			System.out.println("Something went wrong");
-			System.exit(0);
-		}
+		new Thread() {
+			@Override
+			public void run() {
+				try {
+					Game game = new Game();
+					game.start();
+				} catch(InterruptedException e) {
+					System.out.println("Something went wrong");
+					System.exit(0);
+				}
+			}
+		}.start();
 	}
 }
