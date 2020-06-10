@@ -13,7 +13,7 @@ public abstract class MidiCore {
             sequencer.open();
 
             // Cria sequencia apartihr de ficheiro MIDI
-            Sequence sequence = MidiSystem.getSequence(new File("/Users/codecadet/dev/row1game/src/ac/bootcamp/row1game/chavena14.mid"));
+            Sequence sequence = MidiSystem.getSequence(new File("resources/audio/chavena14.mid"));
             // Creating a track on our sequence upon which
             // MIDI events would be placed
             Track track = sequence.createTrack();
