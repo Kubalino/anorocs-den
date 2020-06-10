@@ -20,7 +20,7 @@ public class InputSector {
 		//bar = new Picture(x, y, "mainMenu/background/bar.png");
 		//bar.draw();
 
-		buttonStart = new ButtonStart(500, 612, "mainMenu/buttons/buttonStart.png");
+		buttonStart = new ButtonStart(600, 612, "mainMenu/buttons/buttonStart.png");
 		drawAndRegisterButton(buttonStart);
 
 		buttonExit = new ButtonExit(900, 612, "mainMenu/buttons/buttonExit.png");
@@ -28,6 +28,15 @@ public class InputSector {
 
 		buttonInstruction = new ButtonInstructions(250, 612, "mainMenu/buttons/buttonInfo.png");
 		drawAndRegisterButton(buttonInstruction);
+		
+		new Thread(){
+			@Override
+			public void run() {
+				while(true) {
+					buttonStart.repaint();
+				}
+			}
+		}.start();
 	}
 
 	private void drawAndRegisterButton(Button button) {

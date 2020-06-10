@@ -70,6 +70,10 @@ public class AnimatedPicture implements Shape, Movable {
 			changeFrame((int) currentFrame);
 		}
 		draw();
+		update();
+	}
+
+	public void update() {
 	}
 
 	private void changeFrame(int frameIndex) {

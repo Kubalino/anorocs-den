@@ -2,9 +2,8 @@ package ac.bootcamp.row1game.menu;
 
 import org.academiadecodigo.simplegraphics.mouse.MouseEvent;
 import org.academiadecodigo.simplegraphics.mouse.MouseHandler;
-import org.academiadecodigo.simplegraphics.pictures.Picture;
 
-public class Button extends Picture implements MouseHandler {
+public class Button extends Actor implements MouseHandler {
 
 	public Button(double x, double y, String source) {
 		super(x, y, source);
