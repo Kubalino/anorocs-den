@@ -18,6 +18,7 @@ public class Game {
     public Game() {
 
         this.display = new Display();
+
         this.player = Factory.createPlayer();
         this.monsters = new Entity[4];
         monsters[0] = Factory.createNormalMonster();
@@ -50,7 +51,7 @@ public class Game {
         while(!player.isDead()){
 
 
-            System.out.println("\n" + "Player turn : " + player.getHealth());
+            System.out.println("\n" + player.toString());
             //input part
 
             display.drawMonsterA();
@@ -137,15 +138,17 @@ public class Game {
                }
                
                monsterCounter +=1;
-               System.out.println("\n" + "a wild monster appeared");
                audio.newMonster();
+
+               System.out.println("\n" + "a wild " + monsters[monsterCounter].getEntityType()
+                       + " appeared...");
                Thread.sleep(1000);
                display.drawBackground(monsterCounter);
-               player.levelUp();
+               player.levelUpSout();
 
                continue;
            }
-            System.out.println( "\n" + "monster turn : " + monsters[monsterCounter].getHealth());
+            System.out.println( "\n"  + monsters[monsterCounter].toString());
 
            monsterSkill = RandomMonsterSkills.getRandomMonsterSkill(monsters[monsterCounter],player);
 

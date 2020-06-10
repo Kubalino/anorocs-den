@@ -62,7 +62,13 @@
       <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/display/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/display/Display.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/display/Sprites.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/display/Sprites.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
+    <list default="true" id="d71a1bc2-4b95-48bb-acfa-6336fe9d4741" name="Default Changelist" comment="Added animatedPicture prototype">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/row1game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/row1game.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/ButtonStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/ButtonStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/HomeMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/HomeMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/sectors/VisualSector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ac/bootcamp/row1game/menu/sectors/VisualSector.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +203,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -231,6 +237,11 @@
     <option name="y" value="46" />
     <option name="width" value="1920" />
     <option name="height" value="977" />
+  </component>
+  <component name="ProjectId" id="1d7pVTvgyy3hK2g0ZNRhWSMHcEh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+    &gt;&gt;&gt;&gt;&gt;&gt;&gt; a73892ab7f8ec4c704a25075058c3810a35543a0
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -292,12 +303,14 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591815639525" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591816714092" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -341,14 +354,77 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="859e615c-7bc6-4e7e-9e19-511393be21a7" name="Default Changelist" comment="" />
-      <created>1591741255024</created>
+      <changelist id="d71a1bc2-4b95-48bb-acfa-6336fe9d4741" name="Default Changelist" comment="" />
+      <created>1591726155188</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591741255024</updated>
       <workItem from="1591741257435" duration="1720000" />
       <workItem from="1591783804729" duration="24923000" />
+      <updated>1591726155188</updated>
+      <workItem from="1591726156751" duration="1755000" />
+      <workItem from="1591728173533" duration="4517000" />
+      <workItem from="1591786026172" duration="4760000" />
+      <workItem from="1591792483538" duration="12539000" />
     </task>
+    <task id="LOCAL-00001" summary="Restored buttons">
+      <created>1591736742531</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591736742531</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added animatedPicture prototype">
+      <created>1591788024234</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591788024234</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Adapted actor to the animated picture">
+      <created>1591788469856</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591788469856</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added bat">
+      <created>1591790359615</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591790359615</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Cleanup code">
+      <created>1591790765950</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591790765950</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Cleanup code">
+      <created>1591790779853</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1591790779853</updated>
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; a73892ab7f8ec4c704a25075058c3810a35543a0
+    </task>
+    <task id="LOCAL-00007" summary="Cleanup code">
+      <created>1591790793770</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1591790793770</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Connected button start with game">
+      <created>1591807647197</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1591807647197</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -421,8 +497,56 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    &gt;&gt;&gt;&gt;&gt;&gt;&gt; a73892ab7f8ec4c704a25075058c3810a35543a0
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Restored buttons" />
+    <MESSAGE value="Adapted actor to the animated picture" />
+    <MESSAGE value="Added bat" />
+    <MESSAGE value="Added animatedPicture prototype" />
+    <MESSAGE value="Cleanup code" />
+    <MESSAGE value="Connected button start with game" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connected button start with game" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/resources/sprites/pAttack efect/pA6.png">
@@ -621,55 +745,5 @@
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>10</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>10</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

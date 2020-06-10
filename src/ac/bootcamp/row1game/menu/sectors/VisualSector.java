@@ -1,6 +1,7 @@
 package ac.bootcamp.row1game.menu.sectors;
 
 import ac.bootcamp.row1game.menu.Actor;
+import ac.bootcamp.row1game.menu.Actor.ActorType;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
@@ -8,12 +9,11 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 public class VisualSector {
 
 	private Rectangle rectangleSky;
-	private Picture mountains;
+	//private Picture mountains;
 	private Picture pillars;
 	private Picture backgroundSky;
-	private Actor bat;
-	private Actor cloud;
-	private Actor[] actors = new Actor[2];
+	private final Actor[] actors = new Actor[10];
+	private boolean running = true;
 
 	public void init() {
 		rectangleSky = new Rectangle(10, 10, 1280, 720);
@@ -23,37 +23,40 @@ public class VisualSector {
 		backgroundSky = new Picture(rectangleSky.getX(), rectangleSky.getY(), "mainMenu/background/sky.png");
 		backgroundSky.draw();
 
-		mountains = new Picture(rectangleSky.getX(), rectangleSky.getY(), "mainMenu/background/mountains.png");
-		mountains.draw();
+		//mountains = new Picture(rectangleSky.getX(), rectangleSky.getY(), "mainMenu/background/mountains.png");
+		//mountains.draw();
 
-		cloud = new Actor(500, 300, "mainMenu/actors/cloud.png");
-		cloud.changeToCloud();
-		actors[0] = cloud;
-		cloud.draw();
-
-		bat = new Actor(500, 200, "mainMenu/actors/bat.png");
-		bat.changeToBat();
-		actors[1] = bat;
-		bat.draw();
+		createRandomActors();
 
 		pillars = new Picture(rectangleSky.getX(), rectangleSky.getY(), "mainMenu/background/pillars.png");
 		pillars.draw();
 	}
 
+	private void createRandomActors() {
+		for(int i = 0; i < actors.length; i++) {
+			ActorType randomActorType = ActorType.random();
+			double randomX = Math.random() * (rectangleSky.getWidth() - 200) ;
+			double randomY = Math.random() * (rectangleSky.getHeight() - 200);
+			actors[i] = new Actor(randomX, randomY, randomActorType);
+			actors[i].draw();
+		}
+	}
+
 	public void menuLoop() {
-		while(true) {
+		while(running) {
 			for(Actor actor : actors) {
 				actor.repaint();
 			}
 		}
 	}
-
-	public int getX() {
-		return rectangleSky.getX();
+	
+	public void destroy() {
+		running = false;
+		rectangleSky.delete();
+		pillars.delete();
+		backgroundSky.delete();
+		for(Actor actor : actors) {
+			actor.delete();
+		}
 	}
-
-	public int getY() {
-		return rectangleSky.getY();
-	}
-
 }
