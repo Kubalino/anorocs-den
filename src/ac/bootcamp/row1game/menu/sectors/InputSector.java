@@ -10,15 +10,15 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class InputSector {
 
-	private Picture bar;
+	//private Picture bar;
 	private Button buttonStart;
 	private Button buttonExit;
 	private Button buttonInstruction;
 
 	public void init(int x, int y) {
 
-		bar = new Picture(x, y, "mainMenu/background/bar.png");
-		bar.draw();
+		//bar = new Picture(x, y, "mainMenu/background/bar.png");
+		//bar.draw();
 
 		buttonStart = new ButtonStart(500, 612, "mainMenu/buttons/buttonStart.png");
 		drawAndRegisterButton(buttonStart);

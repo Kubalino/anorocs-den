@@ -46,7 +46,7 @@ public class Actor extends AnimatedPicture {
 	}
 
 	public enum ActorType {
-		BAT(-0.0003d, "mainMenu/actors/bat/bat_0.png", "mainMenu/actors/bat/bat_1.png", "mainMenu/actors/bat/bat_2.png"),
+		BAT(-0.0003d, "mainMenu/actors/bat/bat_0.png", "mainMenu/actors/bat/bat_1.png", "mainMenu/actors/bat/bat_2.png","mainMenu/actors/bat/bat_1.png"),
 		CLOUD(-0.00003d, "mainMenu/actors/cloud.png");
 
 		private double speed;

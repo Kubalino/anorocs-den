@@ -9,7 +9,7 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 public class VisualSector {
 
 	private Rectangle rectangleSky;
-	private Picture mountains;
+	//private Picture mountains;
 	private Picture pillars;
 	private Picture backgroundSky;
 	private final Actor[] actors = new Actor[5];
@@ -22,8 +22,8 @@ public class VisualSector {
 		backgroundSky = new Picture(rectangleSky.getX(), rectangleSky.getY(), "mainMenu/background/sky.png");
 		backgroundSky.draw();
 
-		mountains = new Picture(rectangleSky.getX(), rectangleSky.getY(), "mainMenu/background/mountains.png");
-		mountains.draw();
+		//mountains = new Picture(rectangleSky.getX(), rectangleSky.getY(), "mainMenu/background/mountains.png");
+		//mountains.draw();
 
 		createRandomActors();
 
