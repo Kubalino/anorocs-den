@@ -8,19 +8,19 @@ public class RandomMonsterSkills {
 
 
 
-    public static void getRandomMonsterSkill(Entity monster, Entity player) {
+    public static MonsterSkill getRandomMonsterSkill(Entity monster, Entity player) {
 
-        double heal_chance = 0.50;
+        double heal_chance = 0.10; // 0,50
         double block_chance = 0.30;
         double spell_chance = 0.20;
-        double strongAttack_chance = 0.10;
+        double strongAttack_chance = 0.50; // 0.10
 
         double random = Math.random();
 
         if(monster instanceof HealerMonster) {
             if((monster.getHealth() <= (monster.getMaxHP()/2)) && monster.getPotionAvailable() != 0){
                 monster.getHeal();
-                return;
+                return MonsterSkill.HEAL;
 
             }
             heal_chance = 0.0;
@@ -29,33 +29,36 @@ public class RandomMonsterSkills {
         if((random <= strongAttack_chance)|| monster.getIsCharching()){
             System.out.println("STRONG");
             monster.strongAttack(monster, player);
-            return;
+            if (!monster.getIsCharching()){
+                return MonsterSkill.STRONG;
+            }
+            return MonsterSkill.CHARGE;
+
         }
 
         if(random <= spell_chance) {
             System.out.println("SPELL");
             monster.spell(player);
-            return;
+            return MonsterSkill.SPELL;
         }
 
         if(random <= block_chance) {
             System.out.println("BLOCK");
             monster.block();
-            return;
+            return MonsterSkill.BLOCK;
         }
 
         if(random <= heal_chance) {
             if(monster.getPotionAvailable() == 0){
-                getRandomMonsterSkill(monster, player);
-                return;
+                return getRandomMonsterSkill(monster, player);
             }
             System.out.println("HEAL");
             monster.getHeal();
-            return;
+            return MonsterSkill.HEAL;
         }
         System.out.println("ATTACK");
         monster.attack(player);
-        return;
+        return MonsterSkill.ATTACK;
     }
 
 }
