@@ -77,10 +77,6 @@ public class AnimatedPicture implements Shape, Movable {
 		this.label.setIcon(allFrameIcons[frameIndex]);
 	}
 
-	public int pixels() {
-		return this.image == null ? 0 : this.image.getWidth() * this.image.getHeight();
-	}
-
 	public void setPosition(double xPos, double yPos) {
 		this.x = xPos;
 		this.y = yPos;

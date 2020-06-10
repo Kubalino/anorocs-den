@@ -1,6 +1,7 @@
 package ac.bootcamp.row1game.menu.sectors;
 
 import ac.bootcamp.row1game.menu.Actor;
+import ac.bootcamp.row1game.menu.Actor.ActorType;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
@@ -11,9 +12,7 @@ public class VisualSector {
 	private Picture mountains;
 	private Picture pillars;
 	private Picture backgroundSky;
-	private Actor bat;
-	private Actor cloud;
-	private Actor[] actors = new Actor[2];
+	private final Actor[] actors = new Actor[5];
 
 	public void init() {
 		rectangleSky = new Rectangle(10, 10, 1280, 720);
@@ -26,18 +25,20 @@ public class VisualSector {
 		mountains = new Picture(rectangleSky.getX(), rectangleSky.getY(), "mainMenu/background/mountains.png");
 		mountains.draw();
 
-		cloud = new Actor(500, 300, "mainMenu/actors/cloud.png");
-		cloud.changeToCloud();
-		actors[0] = cloud;
-		cloud.draw();
-
-		bat = new Actor(500, 200, "mainMenu/actors/bat.png");
-		bat.changeToBat();
-		actors[1] = bat;
-		bat.draw();
+		createRandomActors();
 
 		pillars = new Picture(rectangleSky.getX(), rectangleSky.getY(), "mainMenu/background/pillars.png");
 		pillars.draw();
+	}
+
+	private void createRandomActors() {
+		for(int i = 0; i < actors.length; i++) {
+			ActorType randomActorType = Math.random() > 0.5 ? ActorType.BAT : ActorType.CLOUD;
+			double randomX = Math.random() * rectangleSky.getWidth();
+			double randomY = Math.random() * rectangleSky.getHeight();
+			actors[i] = new Actor(randomX, randomY, randomActorType);
+			actors[i].draw();
+		}
 	}
 
 	public void menuLoop() {

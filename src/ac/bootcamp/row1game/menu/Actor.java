@@ -1,16 +1,15 @@
 package ac.bootcamp.row1game.menu;
 
 import org.academiadecodigo.simplegraphics.graphics.Canvas;
-import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Actor extends AnimatedPicture {
 
-	private static final double BAT_SPEED = -0.0003d;
-	private static final double CLOUD_SPEED = -0.00003d;
 	private double speed;
 
-	public Actor(double x, double y, String... source) {
-		super(x, y, source);
+	public Actor(double x, double y, ActorType actorType) {
+		super(x, y, actorType.getFrames());
+
+		changeToType(actorType);
 	}
 
 	@Override
@@ -26,11 +25,11 @@ public class Actor extends AnimatedPicture {
 	}
 
 	private void changeToRandomActor() {
+		ActorType randomType = ActorType.BAT;
 		if(Math.random() < 0.5) {
-			changeToCloud();
-		} else {
-			changeToBat();
+			randomType = ActorType.CLOUD;
 		}
+		changeToType(randomType);
 	}
 
 	private void resetPosition() {
@@ -41,28 +40,29 @@ public class Actor extends AnimatedPicture {
 		return getX() <= 0;
 	}
 
-	public void changeToBat() {
-		initializeFrames(ActorType.BAT.getFrames());
-		speed = BAT_SPEED;
+	private void changeToType(ActorType actorType) {
+		initializeFrames(actorType.getFrames());
+		speed = actorType.getSpeed();
 	}
 
-	public void changeToCloud() {
-		initializeFrames(ActorType.CLOUD.getFrames());
-		speed = CLOUD_SPEED;
-	}
-	
 	public enum ActorType {
-		BAT("mainMenu/actors/bat/bat_0.png", "mainMenu/actors/bat/bat_1.png", "mainMenu/actors/bat/bat_2.png"),
-		CLOUD("mainMenu/actors/cloud.png");
+		BAT(-0.0003d, "mainMenu/actors/bat/bat_0.png", "mainMenu/actors/bat/bat_1.png", "mainMenu/actors/bat/bat_2.png"),
+		CLOUD(-0.00003d, "mainMenu/actors/cloud.png");
 
+		private double speed;
 		private String[] frames;
 
-		ActorType(String... frames) {
+		ActorType(double speed, String... frames) {
+			this.speed = speed;
 			this.frames = frames;
 		}
 
 		public String[] getFrames() {
 			return frames;
+		}
+
+		public double getSpeed() {
+			return speed;
 		}
 	}
 }
