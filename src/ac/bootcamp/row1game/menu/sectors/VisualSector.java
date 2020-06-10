@@ -35,8 +35,8 @@ public class VisualSector {
 	private void createRandomActors() {
 		for(int i = 0; i < actors.length; i++) {
 			ActorType randomActorType = ActorType.random();
-			double randomX = Math.random() * (rectangleSky.getWidth() - 100) ;
-			double randomY = Math.random() * (rectangleSky.getHeight() - 100);
+			double randomX = Math.random() * (rectangleSky.getWidth() - 200) ;
+			double randomY = Math.random() * (rectangleSky.getHeight() - 200);
 			actors[i] = new Actor(randomX, randomY, randomActorType);
 			actors[i].draw();
 		}
