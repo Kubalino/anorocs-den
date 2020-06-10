@@ -18,4 +18,17 @@ public class NormalMonster extends Entity {
     public void getHeal() {
         heal();
     }
+
+    @Override
+    public String toString() {
+        return  " Normal Monster turn " +
+                " | Health: " + getHealth() +
+                " | Level: " + getLevel() + "\n" +
+                " | Potions Left: " + getPotionAvailable() +
+                " | Strong Charges: " + getStrongLeft();
+    }
+
+    public String getEntityType() {
+        return "Normal Monster";
+    }
 }

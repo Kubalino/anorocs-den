@@ -17,4 +17,18 @@ public class HighDamageMonster extends Entity {
     public void getHeal() {
         heal();
     }
+
+    @Override
+    public String toString() {
+        return  " High Damage Monster turn " +
+                " | Health: " + getHealth() +
+                " | Level: " + getLevel() + "\n" +
+                " | Potions Left: " + getPotionAvailable() +
+                " | Strong Charges: " + getStrongLeft();
+    }
+
+    @Override
+    public String getEntityType() {
+        return "High Damage Monster";
+    }
 }
