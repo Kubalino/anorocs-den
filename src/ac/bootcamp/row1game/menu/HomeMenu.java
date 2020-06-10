@@ -2,6 +2,8 @@ package ac.bootcamp.row1game.menu;
 
 import ac.bootcamp.row1game.menu.sectors.InputSector;
 import ac.bootcamp.row1game.menu.sectors.VisualSector;
+import ac.bootcamp.row1game.menu.sound.GameSound;
+import ac.bootcamp.row1game.menu.sound.SoundManager;
 import org.academiadecodigo.simplegraphics.graphics.Canvas;
 
 public class HomeMenu {
@@ -10,8 +12,10 @@ public class HomeMenu {
 	private InputSector inputSector;
 
 	private Thread thread = new Thread();
+	private SoundManager soundManager = new SoundManager();
 
 	public void init() {
+		soundManager.init();
 
 		visualSector = new VisualSector();
 		visualSector.init();
@@ -26,6 +30,7 @@ public class HomeMenu {
 			}
 		};
 		thread.start();
+		SoundManager.playSound(GameSound.MAIN_MENU);
 	}
 
 	public void destroy() {
