@@ -4,7 +4,6 @@ public enum GameSound {
 
     MAIN_MENU("bgm");
 
-
     private String path;
 
     GameSound(String sound) {
