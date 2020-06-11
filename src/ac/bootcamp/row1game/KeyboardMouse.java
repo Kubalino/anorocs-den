@@ -3,8 +3,12 @@ import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
+import org.academiadecodigo.simplegraphics.mouse.Mouse;
+import org.academiadecodigo.simplegraphics.mouse.MouseEvent;
+import org.academiadecodigo.simplegraphics.mouse.MouseEventType;
+import org.academiadecodigo.simplegraphics.mouse.MouseHandler;
 
-public class KeyboardMouse implements KeyboardHandler {
+public class KeyboardMouse implements KeyboardHandler, MouseHandler {
 
     private Keyboard keyboard = new Keyboard(this);
     private boolean key1 = false;
@@ -24,6 +28,9 @@ public class KeyboardMouse implements KeyboardHandler {
     }
 
     public void init() {
+
+	Mouse m = new Mouse(this);
+        m.addEventListener(MouseEventType.MOUSE_CLICKED);
 
         KeyboardEvent inputOne = new KeyboardEvent();
         inputOne.setKey(KeyboardEvent.KEY_1);
@@ -136,10 +143,56 @@ public class KeyboardMouse implements KeyboardHandler {
 
     }
 
+ 	@Override
+    public void mouseClicked(MouseEvent e) {
+        int y = 95;
+        int x1 = 362;
+        int x2 = 478;
+        int x3 = 600;
+        int x4 = 717;
+        int x5 = 784;
+
+        if (e.getY()>60 && e.getY()<113){
+
+            if(e.getX() > (x1-47) && e.getX() < (x1+47)){
+                keyPressed = "1";
+                isPressed = true;
+            }
+            if(e.getX() > (x2-47) && e.getX() < (x2+47)){
+                keyPressed = "2";
+                isPressed = true;
+            }
+            if(e.getX() > (x3-47) && e.getX() < (x3+47)){
+                keyPressed = "3";
+                isPressed = true;
+            }
+            if(e.getX() > (x4-47) && e.getX() < (x4+47)){
+                keyPressed = "4";
+                isPressed = true;
+            }
+            if(e.getX() > (x5-47) && e.getX() < (x5+47)){
+                keyPressed = "5";
+                isPressed = true;
+            }
+        }
+    }
+
+
 
     @Override
     public void keyReleased(KeyboardEvent keyboardEvent) {
 
     }
+
+	@Override
+    public void mouseMoved(MouseEvent mouseEvent) {
+
+    }
+
+    @Override
+    public void keyReleased(KeyboardEvent keyboardEvent) {
+
+    }
+
 }
 
