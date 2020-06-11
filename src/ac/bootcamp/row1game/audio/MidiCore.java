@@ -1,4 +1,4 @@
-package ac.bootcamp.row1game;
+package ac.bootcamp.row1game.audio;
 
 import javax.sound.midi.*;
 import java.io.File;
@@ -13,7 +13,7 @@ public abstract class MidiCore {
             sequencer.open();
 
             // Cria sequencia apartihr de ficheiro MIDI
-            Sequence sequence = MidiSystem.getSequence(new File("resources/audio/chavena14.mid"));
+            Sequence sequence = MidiSystem.getSequence(new File("audio/chavena14.mid"));
             // Creating a track on our sequence upon which
             // MIDI events would be placed
             Track track = sequence.createTrack();

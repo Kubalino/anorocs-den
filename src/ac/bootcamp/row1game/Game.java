@@ -3,9 +3,8 @@ package ac.bootcamp.row1game;
 import ac.bootcamp.row1game.Characters.Entity;
 import ac.bootcamp.row1game.Characters.Factory;
 import ac.bootcamp.row1game.Characters.Player;
+import ac.bootcamp.row1game.audio.AudioEngine;
 import ac.bootcamp.row1game.display.Display;
-import org.academiadecodigo.simplegraphics.graphics.Color;
-import org.academiadecodigo.simplegraphics.graphics.Text;
 
 public class Game {
 
@@ -75,7 +74,7 @@ public class Game {
                     case "1":
 
                         display.deleteActionBar();
-                        audio.atack();
+                        audio.attack();
                         display.drawPlayerAttack();
                         display.drawAttackDone();
                         player.attack(monsters[monsterCounter]);
@@ -134,8 +133,8 @@ public class Game {
                 }
 
             } else {
-
                 display.deleteActionBar();
+                audio.strongAttack();
                 player.strongAttack(player, monsters[monsterCounter]);
                 display.drawChargeDone();
                 display.monsterGetHit(monsters[monsterCounter].getHitDamage(), monsterCounter);
@@ -174,21 +173,24 @@ public class Game {
             switch (monsterSkill) {
                 case ATTACK:
                     display.crit(monsters[monsterCounter]);
+                    audio.attack();
                     display.drawMonsterAttack(monsterCounter);
                     display.drawMonsterAttackDone();
                     display.playerGetHit(player.getHitDamage());
                     break;
                 case BLOCK:
+                    audio.block();
                     display.drawMonsterBlock();
                     break;
                 case HEAL:
+                    audio.heal();
                     display.drawMonsterHeal();
                     display.monsterHealthBar(monsters[monsterCounter].getHealth(), monsters[monsterCounter].getMaxHP())
                     ;
                     break;
                 case SPELL:
-
                     display.crit(monsters[monsterCounter]);
+                    audio.spell();
                     display.drawMonsterAttack(monsterCounter);
                     display.drawMonsterSpellDone();
                     display.playerGetHit(player.getHitDamage());
@@ -197,6 +199,7 @@ public class Game {
                     display.drawMonsterCharging();
                     break;
                 case STRONG:
+                    audio.strongAttack();
                     display.drawMonsterAttack(monsterCounter);
                     display.drawMonsterChargeDone();
                     display.playerGetHit(player.getHitDamage());
@@ -221,7 +224,6 @@ public class Game {
             audio.youDie();
             display.drawGameOver();
         }
-
 
     }
 
