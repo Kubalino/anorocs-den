@@ -8,6 +8,7 @@ public class ButtonStart extends Button {
 
 	private double originalY;
 	private final HomeMenu homeMenu;
+	private boolean alreadyPressed;
 
 	private long lastUpdate = System.currentTimeMillis();
 
@@ -33,6 +34,10 @@ public class ButtonStart extends Button {
 
 	@Override
 	public void processMouseClicked(MouseEvent mouseEvent) {
+		if(alreadyPressed){
+			return;
+		}
+		alreadyPressed = true;
 		homeMenu.destroy();
 		new Thread() {
 			@Override
