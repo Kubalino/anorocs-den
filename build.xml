@@ -33,6 +33,9 @@
                 <attribute name="Class-Path" value="${libs.dir} ${resources.dir}"/>
             </manifest>
             <zipgroupfileset dir="${libs.dir}" includes="*.jar"/>
+            <fileset dir = "${resources.dir}/">
+                <include name = "**/*"/>
+            </fileset>
         </jar>
     </target>
 
