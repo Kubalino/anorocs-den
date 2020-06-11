@@ -26,6 +26,8 @@ public class Display {
     private Picture mBlock;
     private Picture heal;
     private Picture mHeal;
+    private Text pots;
+    private Text strs;
 
     public Display() {
 
@@ -304,6 +306,7 @@ public class Display {
 
 
         charge.draw();
+        charge.grow(100,0);
 
         for (String sprite : CHARGEDDONE) {
 
@@ -311,6 +314,7 @@ public class Display {
             Thread.sleep(100);
         }
 
+        charge.grow(-100,0);
         charge.delete();
     }
 
@@ -397,6 +401,7 @@ public class Display {
 
 
         charging.draw();
+        charging.grow(100,100);
 
         for (String sprite : CHARGINGDONE) {
 
@@ -404,6 +409,7 @@ public class Display {
             Thread.sleep(150);
         }
 
+        charging.grow(-100,-100);
         charging.delete();
     }
 
@@ -412,6 +418,7 @@ public class Display {
 
 
         mCharging.draw();
+        mCharging.grow(100,100);
 
         for (String sprite : CHARGINGDONE) {
 
@@ -419,6 +426,7 @@ public class Display {
             Thread.sleep(150);
         }
 
+        mCharging.grow(-100,-100);
        mCharging.delete();
     }
 
@@ -431,12 +439,22 @@ public class Display {
     }
 
 
-    public void drawActionBar() {
+    public void drawActionBar( int potions, int strong) {
         actionBar.draw();
+        pots = new Text(635,40,String.valueOf(strong));
+        pots.setColor(Color.RED);
+        pots.grow(5,10);
+        strs = new Text(860,40, String.valueOf(potions));
+        strs.setColor(Color.RED);
+        strs.grow(5,10);
+        pots.draw();
+        strs.draw();
     }
 
     public void deleteActionBar() {
         actionBar.delete();
+        strs.delete();
+        pots.delete();
     }
 
 
