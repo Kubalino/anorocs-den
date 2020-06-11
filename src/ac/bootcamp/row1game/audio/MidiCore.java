@@ -13,7 +13,7 @@ public abstract class MidiCore {
             sequencer.open();
 
             // Cria sequencia apartihr de ficheiro MIDI
-            Sequence sequence = MidiSystem.getSequence(new File("resources/audio/chavena16.mid"));
+            Sequence sequence = MidiSystem.getSequence(MidiCore.class.getResource("/audio/chavena16.mid"));
             // Creating a track on our sequence upon which
             // MIDI events would be placed
             Track track = sequence.createTrack();
