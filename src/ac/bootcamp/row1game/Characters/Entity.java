@@ -7,7 +7,7 @@ import ac.bootcamp.row1game.Randomizer;
 public abstract class Entity implements Skills {
 
     private final double HIT_CHANCE = 0.9;
-    private final double CRIT_CHANCE = 0.7;
+    private final double CRIT_CHANCE = 0.2;
 
 
     private int health;

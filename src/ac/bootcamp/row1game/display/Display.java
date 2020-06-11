@@ -24,6 +24,8 @@ public class Display {
     private Picture mSpell;
     private Picture block;
     private Picture mBlock;
+    private Picture heal;
+    private Picture mHeal;
 
     public Display() {
 
@@ -39,10 +41,11 @@ public class Display {
         mSpell = new Picture(170, 175, SPELL_1);
         mCharge = new Picture(170,0, CHARGE_1);
         charging = new Picture(500, 400, CHARGING_1);
-        mCharging = new Picture(700, 400, CHARGING_1);
+        mCharging = new Picture(800, 400, CHARGING_1);
         block = new Picture(250, 400, BLOCK_1);
-        mBlock = new Picture(700,400,BLOCK_1);
-
+        mBlock = new Picture(900,400,BLOCK_1);
+        heal = new Picture(210, 400, HEAL_1);
+        mHeal = new Picture(900,400,HEAL_1);
 
     }
 
@@ -314,14 +317,64 @@ public class Display {
     public void drawPlayerBlock() throws InterruptedException {
 
         block.draw();
-
+        block.grow(100,100);
         for (String sprite : BLOCKING) {
 
             block.load(sprite);
             Thread.sleep(125);
         }
 
+        block.grow(-100,-100);
         block.delete();
+    }
+
+
+    public void drawMonsterBlock() throws InterruptedException {
+
+        mBlock.draw();
+        mBlock.grow(100,100);
+
+        for (String sprite : BLOCKING) {
+
+            mBlock.load(sprite);
+            Thread.sleep(125);
+        }
+
+        mBlock.grow(-100,-100);
+        mBlock.delete();
+    }
+
+    public void drawPlayerHeal() throws InterruptedException {
+
+        heal.draw();
+
+        for (String sprite : HEALING) {
+
+            heal.load(sprite);
+            heal.translate(0,-20);
+            Thread.sleep(200);
+        }
+
+        heal.translate(0,140);
+        heal.delete();
+    }
+
+
+    public void drawMonsterHeal() throws InterruptedException {
+
+        mHeal.draw();
+        mHeal.grow(100,100);
+
+        for (String sprite : HEALING) {
+
+            mHeal.load(sprite);
+            mHeal.translate(0,-20);
+            Thread.sleep(200);
+        }
+
+        mHeal.grow(-100,-100);
+        mHeal.translate(0,140);
+        mHeal.delete();
     }
 
 

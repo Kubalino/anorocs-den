@@ -96,6 +96,14 @@ public final class Sprites {
 
     final static String[] BLOCKING = { BLOCK_1, BLOCK_2, BLOCK_3, BLOCK_4, BLOCK_3, BLOCK_2, BLOCK_1};
 
+    // HEAL
+
+    final static String HEAL_1 = "resources/sprites/heal/heal1.png";
+    final static String HEAL_2 = "resources/sprites/heal/heal2.png";
+    final static String HEAL_3 = "resources/sprites/heal/heal3.png";
+    final static String HEAL_4 = "resources/sprites/heal/heal4.png";
+    final static String[] HEALING = { HEAL_4, HEAL_3, HEAL_2, HEAL_1, HEAL_2, HEAL_3, HEAL_4};
+
     // MONSTER A
 
     final static String MONSTER_A_1 = "resources/sprites/monsterA/monster_a_1.png";

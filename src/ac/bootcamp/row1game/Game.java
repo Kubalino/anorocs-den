@@ -29,16 +29,16 @@ public class Game {
         monsters[3] = Factory.createHighDamageMonster();
 
         monsters[1].levelUp();
-        monsters[2].levelUp();monsters[2].levelUp();
-        monsters[3].levelUp();monsters[3].levelUp();monsters[3].levelUp();
+        monsters[2].levelUp();
+        monsters[2].levelUp();
+        monsters[3].levelUp();
+        monsters[3].levelUp();
+        monsters[3].levelUp();
 
         k.init();
 
 
-
     }
-
-
 
 
     public void start() throws InterruptedException {
@@ -46,11 +46,9 @@ public class Game {
         AudioEngine audio = new AudioEngine();
 
 
-
-
         display.init();
 
-        while(!player.isDead()){
+        while (!player.isDead()) {
 
 
             System.out.println("\n" + player.toString());
@@ -58,21 +56,21 @@ public class Game {
 
             display.drawMonster(monsterCounter);
 
-            display.playerHealthBard(player.getHealth(),player.getMaxHP());
-            display.monsterHealthBar(monsters[monsterCounter].getHealth(),monsters[monsterCounter].getMaxHP());
+            display.playerHealthBard(player.getHealth(), player.getMaxHP());
+            display.monsterHealthBar(monsters[monsterCounter].getHealth(), monsters[monsterCounter].getMaxHP());
 
             k.setIsPressed();
 
-            if(!player.getIsCharching()) {
+            if (!player.getIsCharching()) {
 
                 display.drawActionBar();
 
 
-            while(!k.getIsPressed()) {
-             //   Thread.sleep(500);
-                display.drawPlayerIdle();
+                while (!k.getIsPressed()) {
+                    //   Thread.sleep(500);
+                    display.drawPlayerIdle();
 
-            }
+                }
                 switch (k.getKeyPressed()) {
                     case "1":
 
@@ -82,7 +80,7 @@ public class Game {
                         display.drawAttackDone();
                         player.attack(monsters[monsterCounter]);
                         display.crit(player);
-                        display.monsterGetHit(monsters[monsterCounter].getHitDamage(),monsterCounter);
+                        display.monsterGetHit(monsters[monsterCounter].getHitDamage(), monsterCounter);
 
                         break;
                     case "2":
@@ -94,7 +92,7 @@ public class Game {
                         player.spell(monsters[monsterCounter]);
                         display.crit(player);
 
-                        display.monsterGetHit(monsters[monsterCounter].getHitDamage(),monsterCounter);
+                        display.monsterGetHit(monsters[monsterCounter].getHitDamage(), monsterCounter);
                         break;
                     case "3":
                         display.deleteActionBar();
@@ -108,7 +106,6 @@ public class Game {
                         player.strongAttack(player, monsters[monsterCounter]);
 
 
-
                         break;
                     case "4":
                         display.deleteActionBar();
@@ -119,99 +116,107 @@ public class Game {
                         break;
                     case "5":
                         display.deleteActionBar();
-                        audio.heal();
                         if (player.getPotionAvailable() == 0) {
                             System.out.println("no more pots");
                             continue;
                         }
+                        audio.heal();
+                        display.drawPlayerHeal();
                         player.heal();
-                        display.playerHealthBard(player.getHealth(),player.getMaxHP());
+                        display.playerHealthBard(player.getHealth(), player.getMaxHP());
                         break;
 
                     default:
-                      //  System.out.println("invalid");
+                        //  System.out.println("invalid");
                         continue;
 
                 }
 
-            }else{
+            } else {
 
                 display.deleteActionBar();
                 player.strongAttack(player, monsters[monsterCounter]);
                 display.drawChargeDone();
-                display.monsterGetHit(monsters[monsterCounter].getHitDamage(),monsterCounter);
+                display.monsterGetHit(monsters[monsterCounter].getHitDamage(), monsterCounter);
             }
 
 
-            display.monsterHealthBar(monsters[monsterCounter].getHealth(),monsters[monsterCounter].getMaxHP());
+            display.monsterHealthBar(monsters[monsterCounter].getHealth(), monsters[monsterCounter].getMaxHP());
 
-           //RandomMonsterSkills.getRandomMonsterSkill(player,monsters[monsterCounter]);
-           Thread.sleep(2000);
+            //RandomMonsterSkills.getRandomMonsterSkill(player,monsters[monsterCounter]);
+            Thread.sleep(2000);
 
-           monsters[monsterCounter].stopBlocking();
+            monsters[monsterCounter].stopBlocking();
 
 
-           if(monsters[monsterCounter].isDead()){
-               display.deleteMonster();
-               if(monsterCounter == 3){
-                   break;
-               }
-               
-               monsterCounter +=1;
-               audio.newMonster();
+            if (monsters[monsterCounter].isDead()) {
+                display.deleteMonster();
+                if (monsterCounter == 3) {
+                    break;
+                }
 
-               System.out.println("\n" + "a wild " + monsters[monsterCounter].getEntityType()
-                       + " appeared...");
-               Thread.sleep(1000);
-               display.drawBackground(monsterCounter);
-               player.levelUpSout();
+                monsterCounter += 1;
+                audio.newMonster();
 
-               continue;
-           }
-            System.out.println( "\n"  + monsters[monsterCounter].toString());
+                System.out.println("\n" + "a wild " + monsters[monsterCounter].getEntityType()
+                        + " appeared...");
+                Thread.sleep(1000);
+                display.drawBackground(monsterCounter);
+                player.levelUpSout();
 
-           monsterSkill = RandomMonsterSkills.getRandomMonsterSkill(monsters[monsterCounter],player);
+                continue;
+            }
+            System.out.println("\n" + monsters[monsterCounter].toString());
 
-           switch (monsterSkill){
-               case ATTACK:
-                display.crit(monsters[monsterCounter]);
-               display.drawMonsterAttack(monsterCounter);
-               display.drawMonsterAttackDone();
-               display.playerGetHit(player.getHitDamage());
-               break;
-               case BLOCK: display.drawMonsterAttackDone(); break;
-               case HEAL: display.drawMonsterAttackDone();
-               display.monsterHealthBar(monsters[monsterCounter].getHealth(),monsters[monsterCounter].getMaxHP())
-               ;break;
-               case SPELL:
+            monsterSkill = RandomMonsterSkills.getRandomMonsterSkill(monsters[monsterCounter], player);
 
-                   display.crit(monsters[monsterCounter]);
-               display.drawMonsterAttack(monsterCounter);
-               display.drawMonsterSpellDone();
-               display.playerGetHit(player.getHitDamage());
-               break;
-               case CHARGE: display.drawMonsterCharging(); break;
-               case STRONG:
-               display.drawMonsterAttack(monsterCounter);
-               display.drawMonsterChargeDone();
-               display.playerGetHit(player.getHitDamage());
-               break;
-           }
-           display.playerHealthBard(player.getHealth(),player.getMaxHP());
+            switch (monsterSkill) {
+                case ATTACK:
+                    display.crit(monsters[monsterCounter]);
+                    display.drawMonsterAttack(monsterCounter);
+                    display.drawMonsterAttackDone();
+                    display.playerGetHit(player.getHitDamage());
+                    break;
+                case BLOCK:
+                    display.drawMonsterBlock();
+                    break;
+                case HEAL:
+                    display.drawMonsterHeal();
+                    display.monsterHealthBar(monsters[monsterCounter].getHealth(), monsters[monsterCounter].getMaxHP())
+                    ;
+                    break;
+                case SPELL:
 
-        //   Thread.sleep(2000);
+                    display.crit(monsters[monsterCounter]);
+                    display.drawMonsterAttack(monsterCounter);
+                    display.drawMonsterSpellDone();
+                    display.playerGetHit(player.getHitDamage());
+                    break;
+                case CHARGE:
+                    display.drawMonsterCharging();
+                    break;
+                case STRONG:
+                    display.drawMonsterAttack(monsterCounter);
+                    display.drawMonsterChargeDone();
+                    display.playerGetHit(player.getHitDamage());
+                    break;
+            }
+            display.playerHealthBard(player.getHealth(), player.getMaxHP());
 
-           player.stopBlocking();
+            //   Thread.sleep(2000);
 
+            player.setCrit();
+            monsters[monsterCounter].setCrit();
+            player.stopBlocking();
 
 
         }
 
-        if(!player.isDead()){
+        if (!player.isDead()) {
             audio.youWin();
             display.drawGameEnding();
         }
-        if(player.isDead()){
+        if (player.isDead()) {
             audio.youDie();
             display.drawGameOver();
         }

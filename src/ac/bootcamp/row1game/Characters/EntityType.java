@@ -4,7 +4,7 @@ package ac.bootcamp.row1game.Characters;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public enum EntityType {
-    PLAYER(100, 20, 5), // 100,20,5
+    PLAYER(100, 200, 5), // 100,20,5
     NORMAL_MONSTER(100,10,5),
     ARMOURED_MONSTER(100, 10,10),
     HEALER_MONSTER(200, 5, 4),

@@ -11,7 +11,7 @@ public class NormalMonster extends Entity {
     }
 
     public void heal() {
-        super.heal(5, 10);
+        super.heal(10, 20);
     }
 
     @Override
