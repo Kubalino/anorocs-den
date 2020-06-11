@@ -7,7 +7,7 @@ import ac.bootcamp.row1game.Randomizer;
 public abstract class Entity implements Skills {
 
     private final double HIT_CHANCE = 0.9;
-    private final double CRIT_CHANCE = 0.2;
+    private final double CRIT_CHANCE = 0.7;
 
 
     private int health;
@@ -21,6 +21,8 @@ public abstract class Entity implements Skills {
     private boolean isCharging = false;
     private int strongLeft;
     private int hitDamage;
+    private boolean crit = false;
+
 
     public Entity(EntityType entity) {
         this.health = entity.getHealth();
@@ -34,6 +36,14 @@ public abstract class Entity implements Skills {
         this.strongLeft = 3;
     }
 
+
+    public boolean getCrit(){
+        return crit;
+    }
+    public void setCrit(){
+        crit = false;
+    }
+
     @Override
     public void attack(Entity target) {
         int damage = baseDamage + (Randomizer.getRandom(0, baseDamage));
@@ -42,6 +52,7 @@ public abstract class Entity implements Skills {
             if(Math.random() < getCRIT_CHANCE() ){
                 System.out.println("CRITICAL HIT");
                 damage *=2;
+                crit = true;
             }
             System.out.println("HIT Power: " + damage);
             target.hit(damage);
@@ -49,6 +60,7 @@ public abstract class Entity implements Skills {
             return;
         }
         target.hit(0);
+
 
         System.out.println("It's a MISS!");
         return;
@@ -67,6 +79,7 @@ public abstract class Entity implements Skills {
             if(Math.random() < getCRIT_CHANCE()){
                 System.out.print("CRITICAL HIT");
                 damage *=2;
+                crit = true;
             }
             System.out.println(getEntityType() + ": Spell Power: " + damage);
             target.hit(damage);
@@ -74,6 +87,7 @@ public abstract class Entity implements Skills {
             return;
         }
         target.hit(0);
+
 
         System.out.println(getEntityType() + ": It's a MISS!");
         return;
@@ -104,6 +118,7 @@ public abstract class Entity implements Skills {
                 target.hit(damage);
 
                 }
+
 
                 strongLeft -=1;
             isCharging = false;
