@@ -10,10 +10,10 @@ public class RandomMonsterSkills {
 
     public static MonsterSkill getRandomMonsterSkill(Entity monster, Entity player) {
 
-        double heal_chance = 0.50; // 0,50
-        double block_chance = 0.30; // 0.30
+        double heal_chance = 0.50;
+        double block_chance = 0.30;
         double spell_chance = 0.20;
-        double strongAttack_chance = 0.10; // 0.10
+        double strongAttack_chance = 0.10;
 
         double random = Math.random();
 

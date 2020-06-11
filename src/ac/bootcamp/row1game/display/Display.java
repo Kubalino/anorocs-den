@@ -115,7 +115,7 @@ public class Display {
 
         for(String intro : INTROS){
             background.load(intro);
-            Thread.sleep(4000);
+            Thread.sleep(10000);
         }
 
     }

@@ -47,9 +47,15 @@ public class Actor extends AnimatedPicture {
 	}
 
 	public enum ActorType {
-		BAT(-0.0004d, "mainMenu/actors/bat/bat_0.png", "mainMenu/actors/bat/bat_1.png", "mainMenu/actors/bat/bat_2.png", "mainMenu/actors/bat/bat_1.png"),
+		BAT(-0.0004d, "mainMenu/actors/bat/bat_0.png",
+				"mainMenu/actors/bat/bat_1.png",
+				"mainMenu/actors/bat/bat_2.png",
+				"mainMenu/actors/bat/bat_1.png"),
 		CLOUD(-0.00003d, "mainMenu/actors/cloud.png"),
-		DRAGON(-0.001d, "mainMenu/actors/dragon/dragon_0.png", "mainMenu/actors/dragon/dragon_1.png", "mainMenu/actors/dragon/dragon_2.png", "mainMenu/actors/dragon/dragon_1.png");
+		DRAGON(-0.001d, "mainMenu/actors/dragon/dragon_0.png",
+				"mainMenu/actors/dragon/dragon_1.png",
+				"mainMenu/actors/dragon/dragon_2.png",
+				"mainMenu/actors/dragon/dragon_1.png");
 
 		private double speed;
 		private String[] frames;
