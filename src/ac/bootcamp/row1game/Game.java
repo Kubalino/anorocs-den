@@ -56,7 +56,10 @@ public class Game {
             System.out.println("\n" + player.toString());
             //input part
 
-            display.drawMonsterA();
+            display.drawMonster(monsterCounter);
+
+            display.playerHealthBard(player.getHealth(),player.getMaxHP());
+            display.monsterHealthBar(monsters[monsterCounter].getHealth(),monsters[monsterCounter].getMaxHP());
 
             k.setIsPressed();
 
@@ -118,6 +121,7 @@ public class Game {
                             continue;
                         }
                         player.heal();
+                        display.playerHealthBard(player.getHealth(),player.getMaxHP());
                         break;
 
                     default:
@@ -134,6 +138,8 @@ public class Game {
             }
 
 
+            display.monsterHealthBar(monsters[monsterCounter].getHealth(),monsters[monsterCounter].getMaxHP());
+
            //RandomMonsterSkills.getRandomMonsterSkill(player,monsters[monsterCounter]);
            Thread.sleep(2000);
 
@@ -141,7 +147,7 @@ public class Game {
 
 
            if(monsters[monsterCounter].isDead()){
-               display.deleteMonsterA();
+               display.deleteMonster();
                if(monsterCounter == 3){
                    break;
                }
@@ -166,7 +172,9 @@ public class Game {
                display.playerGetHit(player.getHitDamage());
                break;
                case BLOCK: display.drawMonsterAttackDone(); break;
-               case HEAL: display.drawMonsterAttackDone(); break;
+               case HEAL: display.drawMonsterAttackDone();
+               display.monsterHealthBar(monsters[monsterCounter].getHealth(),monsters[monsterCounter].getMaxHP())
+               ;break;
                case SPELL: display.drawMonsterSpellDone();
                display.playerGetHit(player.getHitDamage());
                break;
@@ -175,6 +183,7 @@ public class Game {
                display.playerGetHit(player.getHitDamage());
                break;
            }
+           display.playerHealthBard(player.getHealth(),player.getMaxHP());
 
         //   Thread.sleep(2000);
 

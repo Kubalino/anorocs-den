@@ -1,6 +1,7 @@
 package ac.bootcamp.row1game.display;
 
 import org.academiadecodigo.simplegraphics.graphics.Color;
+import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.graphics.Text;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
@@ -11,7 +12,7 @@ public class Display {
     private Picture background;
     private Picture actionBar;
     private Picture player;
-    private Picture monster_A;
+    private Picture monster;
     private Picture attack;
     private Picture spell;
     private Picture charge;
@@ -22,33 +23,55 @@ public class Display {
     private Picture mSpell;
     private Picture block;
     private Picture mBlock;
-    private Text text;
 
     public Display() {
 
         // TODO: Change magic number into variables depending on image size
         background = new Picture(10, 10, BACKGROUND_1);
-        actionBar = new Picture(100, 100, ACTION_BAR);
+        actionBar = new Picture(300, 0, ACTION_BAR);
         player = new Picture(150, 375, PLAYER_IDLE_1);
-        monster_A = new Picture(500, 200, MONSTER_A);
-        attack = new Picture(600, 260, ATTACK_1);
-        spell = new Picture(620, 180, SPELL_1);
+        monster = new Picture(690, 180, MONSTER_A_1);
+        attack = new Picture(800, 260, ATTACK_1);
+        spell = new Picture(800, 180, SPELL_1);
+        charge = new Picture(800,0,CHARGE_1);
         mAttack = new Picture(170, 375, M_ATTACK_1);
         mSpell = new Picture(170, 175, SPELL_1);
         mCharge = new Picture(170,0, CHARGE_1);
-        charge = new Picture(700,0,CHARGE_1);
         charging = new Picture(250, 400, CHARGING_1);
         mCharging = new Picture(700, 400, CHARGING_1);
         block = new Picture(250, 400, BLOCK_1);
         mBlock = new Picture(700,400,BLOCK_1);
 
+
     }
 
-    public void init() {
+    public void init()throws InterruptedException{
 
-        background.draw();
+
+        drawGameIntro();
+        background.load(BACKGROUND_1);
         player.draw();
 
+    }
+
+    public void playerHealthBard(int hp,int max){
+        int current = (int)((hp*400)/max);
+        Rectangle r = new Rectangle(50,670,400,50);
+        Rectangle m = new Rectangle(50,670,current,50);
+        r.setColor(Color.RED);
+        m.setColor(Color.GREEN);
+        r.fill();
+        m.fill();
+    }
+
+    public void monsterHealthBar(int hp, int max){
+        int current = (int)((hp*400)/max);
+        Rectangle r = new Rectangle(800,670,400,50);
+        Rectangle m = new Rectangle(800,670,current,50);
+        r.setColor(Color.RED);
+        m.setColor(Color.GREEN);
+        r.fill();
+        m.fill();
     }
 
 
@@ -66,37 +89,28 @@ public class Display {
         }
     }
 
-    public void drawMessage(int x, int y, String message, int time) throws InterruptedException {
+    public void drawGameIntro() throws InterruptedException {
 
+        background.draw();
 
-        text = new Text(x, y, message);
-        text.setColor(Color.WHITE);
-        text.grow(100, 50);
-        text.draw();
-        Thread.sleep(time);
-        text.delete();
+        for(String intro : INTROS){
+            background.load(intro);
+            Thread.sleep(4000);
+        }
+
     }
 
     public void drawGameEnding() throws InterruptedException {
-        player.delete();
-        actionBar.delete();
-        background.load(BACKGROUND_5);
-
-        drawMessage(200, 300, "You completed the game!", 1000);
-        drawMessage(200, 400, "Thanks for playing", 1000);
-        drawMessage(200, 500, "The end.", 1000);
-
-        Thread.sleep(2000);
-        text.delete();
-
-        background.load(CREDITS);
+        Picture p = new Picture(10,10, BACKGROUND_5);
+        p.draw();
+        Thread.sleep(5000);
+        p.load(CREDITS);
     }
 
     public void drawGameOver() throws InterruptedException {
-        player.delete();
-        actionBar.delete();
-        monster_A.delete();
-        background.load(GAMEOVER);
+        Rectangle r = new Rectangle(10,1,1280,720);
+        r.setColor(Color.BLACK);
+        r.fill();
         Picture gameOver = new Picture(300, 300, GAMEOVERPIC);
         gameOver.draw();
         for (int i = 0; i < 20; i++) {
@@ -162,6 +176,7 @@ public class Display {
     public void drawMonsterAttackDone() throws InterruptedException {
 
         mAttack.draw();
+
 
         for (String sprite : M_ATTACKDONE) {
 
@@ -290,16 +305,31 @@ public class Display {
     }
 
 
-    public void drawMonsterA() {
+    public void drawMonster(int monsterType) {
 
-        monster_A.load(MONSTER_A);
-        monster_A.draw();
+        switch (monsterType) {
+            case 0:
+                monster.load(MONSTER_A_1);
+                break;
+            case 1:
+                monster.load(MONSTER_B_1);
+                break;
+            case 2:
+                monster.load(MONSTER_C_1);
+                break;
+            case 3:
+                monster.load(MONSTER_D_1);
+                break;
+
+
+        }
+        monster.draw();
     }
 
-    public void deleteMonsterA() throws InterruptedException {
+    public void deleteMonster() throws InterruptedException {
 
-        monster_A.load(MONSTER_A);
+      //  monster.load(MONSTER_A_X);
         Thread.sleep(1000);
-        monster_A.delete();
+        monster.delete();
     }
 }

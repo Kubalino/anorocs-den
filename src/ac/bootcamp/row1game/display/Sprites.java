@@ -1,16 +1,22 @@
 package ac.bootcamp.row1game.display;
 
+
 public final class Sprites {
 
     // BACKGROUNDS
-    final static String CREDITS = "resources/background/credits.png";
+    final static String CREDITS = "resources/background/background_credits.png";
     final static String GAMEOVER = "resources/background/you_died_background.png";
     final static String GAMEOVERPIC = "resources/background/you_died_picture.png";
-    final static String BACKGROUND_1 = "resources/background/background_1.png";
-    final static String BACKGROUND_2 = "resources/background/background_2.png";
-    final static String BACKGROUND_3 = "resources/background/background_3.png";
-    final static String BACKGROUND_4 = "resources/background/background_4.png";
-    final static String BACKGROUND_5 = "resources/background/background_5.png";
+    final static String BACKGROUND_1 = "resources/background/bg1.png";
+    final static String BACKGROUND_2 = "resources/background/bg2.png";
+    final static String BACKGROUND_3 = "resources/background/bg3.png";
+    final static String BACKGROUND_4 = "resources/background/bg4.png";
+    final static String BACKGROUND_5 = "resources/background/bg5.png";
+    final static String INTRO_1 = "resources/background/background_inicial_1.png";
+    final static String INTRO_2 = "resources/background/background_inicial_2.png";
+    final static String INTRO_3 = "resources/background/background_inicial_3.png";
+
+    final static String[] INTROS = { INTRO_1, INTRO_2, INTRO_3};
 
     // ACTION BAR
     final static String ACTION_BAR = "resources/sprites/action bar/action bar.png";
@@ -85,9 +91,48 @@ public final class Sprites {
 
     final static String[] BLOCKING = { BLOCK_1, BLOCK_2, BLOCK_3, BLOCK_4, BLOCK_3, BLOCK_2, BLOCK_1};
 
-    // MONSTERS
+    // MONSTER A
 
-    final static String MONSTER_A = "resources/sprites/monster 1 attack/mA1.png";
+    final static String MONSTER_A_1 = "resources/sprites/monsterA/monster_a_1.png";
+    final static String MONSTER_A_2 = "resources/sprites/monsterA/monster_a_2.png";
+    final static String MONSTER_A_3 = "resources/sprites/monsterA/monster_a_3.png";
+
+    final static String[] MONSTER_A_ATK = { MONSTER_A_1, MONSTER_A_2, MONSTER_A_3, MONSTER_A_2,MONSTER_A_1};
+
+    // MONSTER A DAMAGED
+
+    final static String MONSTER_A_X = "resources/sprites/monsterA/monster_a_x.png";
+
+
+    // MONSTER B
+
+    final static String MONSTER_B_1 = "resources/sprites/monsterB/monster_b_1.png";
+    final static String MONSTER_B_2 = "resources/sprites/monsterB/monster_b_2.png";
+
+    // MONSTER B DAMAGED
+
+    final static String MONSTER_B_X = "resources/sprites/monsterB/monster_b_x.png";
+
+    // MONSTER C
+    final static String MONSTER_C_1 = "resources/sprites/monsterC/monster_c_1.png";
+    final static String MONSTER_C_2 = "resources/sprites/monsterC/monster_c_2.png";
+    final static String MONSTER_C_3 = "resources/sprites/monsterC/monster_c_3.png";
+
+    final static String[] MONSTER_C_ATK = { MONSTER_C_1, MONSTER_C_2, MONSTER_C_3, MONSTER_C_2,MONSTER_C_1};
+
+    // MONSTER C DAMAGED
+    final static String MONSTER_C_X = "resources/sprites/monsterC/monster_c_x.png";
+
+
+    // MONSTER D
+    final static String MONSTER_D_1 = "resources/sprites/monsterD/monster_d_1.png";
+    final static String MONSTER_D_2 = "resources/sprites/monsterD/monster_d_2.png";
+    final static String MONSTER_D_3 = "resources/sprites/monsterD/monster_d_3.png";
+
+    final static String[] MONSTER_D_ATK = { MONSTER_D_1, MONSTER_D_2, MONSTER_D_3, MONSTER_D_2,MONSTER_D_1};
+
+    // MONSTER D DAMAGED
+    final static String MONSTER_D_X = "resources/sprites/monsterD/monster_d_x.png";
 
     // MONSTER ATTACK
     final static String M_ATTACK_1 = "resources/sprites/mAttack effect/mA1.png";
