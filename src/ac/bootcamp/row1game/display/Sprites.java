@@ -18,6 +18,9 @@ public final class Sprites {
 
     final static String[] INTROS = { INTRO_1, INTRO_2, INTRO_3};
 
+    //CRIT
+    final static String CRIT = "resources/sprites/critical hit.png";
+
     // ACTION BAR
     final static String ACTION_BAR = "resources/sprites/action bar/action bar.png";
 
@@ -32,9 +35,11 @@ public final class Sprites {
 
     final static String PLAYER_DAMAGE = "resources/sprites/pdamage.png";
 
+    final static String[] PLAYER_DAMAGED = {PLAYER_IDLE_1,PLAYER_DAMAGE,PLAYER_IDLE_1,PLAYER_DAMAGE,PLAYER_IDLE_1,PLAYER_DAMAGE,PLAYER_IDLE_1};
+
 
     final static String[] IDLESPRITES = {PLAYER_IDLE_1, PLAYER_IDLE_2, PLAYER_IDLE_3, PLAYER_IDLE_4};
-    final static String[] ATTACKSPRITES = {PLAYER_ATTACK_1, PLAYER_ATTACK_2, PLAYER_ATTACK_1, PLAYER_IDLE_1};
+    final static String[] ATTACKSPRITES = {PLAYER_ATTACK_1, PLAYER_ATTACK_2,PLAYER_ATTACK_2, PLAYER_ATTACK_1, PLAYER_IDLE_1};
 
     // PLAYER ATTACK
     final static String ATTACK_1 = "resources/sprites/pAttack efect/pA1.png";
@@ -97,11 +102,13 @@ public final class Sprites {
     final static String MONSTER_A_2 = "resources/sprites/monsterA/monster_a_2.png";
     final static String MONSTER_A_3 = "resources/sprites/monsterA/monster_a_3.png";
 
-    final static String[] MONSTER_A_ATK = { MONSTER_A_1, MONSTER_A_2, MONSTER_A_3, MONSTER_A_2,MONSTER_A_1};
+    final static String[] MONSTER_A_ATK = { MONSTER_A_1, MONSTER_A_2, MONSTER_A_3,MONSTER_A_3, MONSTER_A_2,MONSTER_A_1};
 
     // MONSTER A DAMAGED
 
     final static String MONSTER_A_X = "resources/sprites/monsterA/monster_a_x.png";
+
+    final static String[] MONSTER_A_DAMAGED = {MONSTER_A_1,MONSTER_A_X,MONSTER_A_1,MONSTER_A_X,MONSTER_A_1,MONSTER_A_X,MONSTER_A_1};
 
 
     // MONSTER B
@@ -109,19 +116,25 @@ public final class Sprites {
     final static String MONSTER_B_1 = "resources/sprites/monsterB/monster_b_1.png";
     final static String MONSTER_B_2 = "resources/sprites/monsterB/monster_b_2.png";
 
+    final static  String[] MONSTER_B_ATK = {MONSTER_B_1,MONSTER_B_2,MONSTER_B_2,MONSTER_B_1,MONSTER_B_1,MONSTER_B_2,MONSTER_B_2,MONSTER_B_1};
+
     // MONSTER B DAMAGED
 
     final static String MONSTER_B_X = "resources/sprites/monsterB/monster_b_x.png";
+
+    final static String[] MONSTER_B_DAMAGED = {MONSTER_B_1,MONSTER_B_X,MONSTER_B_1,MONSTER_B_X,MONSTER_B_1,MONSTER_B_X,MONSTER_B_1};
 
     // MONSTER C
     final static String MONSTER_C_1 = "resources/sprites/monsterC/monster_c_1.png";
     final static String MONSTER_C_2 = "resources/sprites/monsterC/monster_c_2.png";
     final static String MONSTER_C_3 = "resources/sprites/monsterC/monster_c_3.png";
 
-    final static String[] MONSTER_C_ATK = { MONSTER_C_1, MONSTER_C_2, MONSTER_C_3, MONSTER_C_2,MONSTER_C_1};
+    final static String[] MONSTER_C_ATK = { MONSTER_C_1, MONSTER_C_2, MONSTER_C_3,MONSTER_C_3, MONSTER_C_2,MONSTER_C_1};
 
     // MONSTER C DAMAGED
     final static String MONSTER_C_X = "resources/sprites/monsterC/monster_c_x.png";
+
+    final static String[] MONSTER_C_DAMAGED = {MONSTER_C_1,MONSTER_C_X,MONSTER_C_1,MONSTER_C_X,MONSTER_C_1,MONSTER_C_X,MONSTER_C_1};
 
 
     // MONSTER D
@@ -129,10 +142,12 @@ public final class Sprites {
     final static String MONSTER_D_2 = "resources/sprites/monsterD/monster_d_2.png";
     final static String MONSTER_D_3 = "resources/sprites/monsterD/monster_d_3.png";
 
-    final static String[] MONSTER_D_ATK = { MONSTER_D_1, MONSTER_D_2, MONSTER_D_3, MONSTER_D_2,MONSTER_D_1};
+    final static String[] MONSTER_D_ATK = { MONSTER_D_1, MONSTER_D_2, MONSTER_D_3,MONSTER_D_3, MONSTER_D_2,MONSTER_D_1};
 
     // MONSTER D DAMAGED
     final static String MONSTER_D_X = "resources/sprites/monsterD/monster_d_x.png";
+
+    final static String[] MONSTER_D_DAMAGED = {MONSTER_D_1,MONSTER_D_X,MONSTER_D_1,MONSTER_D_X,MONSTER_D_1,MONSTER_D_X,MONSTER_D_1};
 
     // MONSTER ATTACK
     final static String M_ATTACK_1 = "resources/sprites/mAttack effect/mA1.png";

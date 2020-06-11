@@ -75,22 +75,26 @@ public class Game {
             }
                 switch (k.getKeyPressed()) {
                     case "1":
+
                         display.deleteActionBar();
                         audio.atack();
                         display.drawPlayerAttack();
                         display.drawAttackDone();
                         player.attack(monsters[monsterCounter]);
-                        display.monsterGetHit(monsters[monsterCounter].getHitDamage());
+                        display.crit(player);
+                        display.monsterGetHit(monsters[monsterCounter].getHitDamage(),monsterCounter);
 
                         break;
                     case "2":
+
                         display.deleteActionBar();
                         audio.spell();
-                        player.spell(monsters[monsterCounter]);
                         display.drawPlayerAttack();
                         display.drawSpellDone();
+                        player.spell(monsters[monsterCounter]);
+                        display.crit(player);
 
-                        display.monsterGetHit(monsters[monsterCounter].getHitDamage());
+                        display.monsterGetHit(monsters[monsterCounter].getHitDamage(),monsterCounter);
                         break;
                     case "3":
                         display.deleteActionBar();
@@ -131,10 +135,11 @@ public class Game {
                 }
 
             }else{
+
                 display.deleteActionBar();
                 player.strongAttack(player, monsters[monsterCounter]);
                 display.drawChargeDone();
-                display.monsterGetHit(monsters[monsterCounter].getHitDamage());
+                display.monsterGetHit(monsters[monsterCounter].getHitDamage(),monsterCounter);
             }
 
 
@@ -168,18 +173,27 @@ public class Game {
            monsterSkill = RandomMonsterSkills.getRandomMonsterSkill(monsters[monsterCounter],player);
 
            switch (monsterSkill){
-               case ATTACK: display.drawMonsterAttackDone();
+               case ATTACK:
+                display.crit(monsters[monsterCounter]);
+               display.drawMonsterAttack(monsterCounter);
+               display.drawMonsterAttackDone();
                display.playerGetHit(player.getHitDamage());
                break;
                case BLOCK: display.drawMonsterAttackDone(); break;
                case HEAL: display.drawMonsterAttackDone();
                display.monsterHealthBar(monsters[monsterCounter].getHealth(),monsters[monsterCounter].getMaxHP())
                ;break;
-               case SPELL: display.drawMonsterSpellDone();
+               case SPELL:
+
+                   display.crit(monsters[monsterCounter]);
+               display.drawMonsterAttack(monsterCounter);
+               display.drawMonsterSpellDone();
                display.playerGetHit(player.getHitDamage());
                break;
                case CHARGE: display.drawMonsterCharging(); break;
-               case STRONG: display.drawMonsterChargeDone();
+               case STRONG:
+               display.drawMonsterAttack(monsterCounter);
+               display.drawMonsterChargeDone();
                display.playerGetHit(player.getHitDamage());
                break;
            }
@@ -188,6 +202,8 @@ public class Game {
         //   Thread.sleep(2000);
 
            player.stopBlocking();
+
+
 
         }
 

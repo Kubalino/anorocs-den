@@ -1,5 +1,6 @@
 package ac.bootcamp.row1game.display;
 
+import ac.bootcamp.row1game.Characters.Entity;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.graphics.Text;
@@ -37,7 +38,7 @@ public class Display {
         mAttack = new Picture(170, 375, M_ATTACK_1);
         mSpell = new Picture(170, 175, SPELL_1);
         mCharge = new Picture(170,0, CHARGE_1);
-        charging = new Picture(250, 400, CHARGING_1);
+        charging = new Picture(500, 400, CHARGING_1);
         mCharging = new Picture(700, 400, CHARGING_1);
         block = new Picture(250, 400, BLOCK_1);
         mBlock = new Picture(700,400,BLOCK_1);
@@ -53,6 +54,22 @@ public class Display {
         player.draw();
 
     }
+
+    public void crit(Entity entity)throws InterruptedException{
+        if(entity.getCrit()) {
+            Picture crit = new Picture(550, 200, CRIT);
+            crit.grow(200,56);
+
+            for(int i = 0; i < 5; i++){
+                crit.draw();
+                Thread.sleep(100);
+                crit.delete();
+                Thread.sleep(100);
+            }
+        }
+
+    }
+
 
     public void playerHealthBard(int hp,int max){
         int current = (int)((hp*400)/max);
@@ -127,17 +144,76 @@ public class Display {
 
     }
 
-    private void animate(String[] sprites) throws InterruptedException {
-        for (String sprite : sprites) {
-            player.load(sprite);
-            Thread.sleep(250);
+
+    public void monsterDamaged(int monsterType)throws InterruptedException{
+        String[] monsterArray = null;
+
+        switch(monsterType){
+            case 0:
+                monsterArray = MONSTER_A_DAMAGED;
+                break;
+            case 1:
+                monsterArray = MONSTER_B_DAMAGED;
+                break;
+            case 2:
+                monsterArray = MONSTER_C_DAMAGED;
+                break;
+            case 3:
+                monsterArray = MONSTER_D_DAMAGED;
+                break;
+        }
+
+        animateMonster(monsterArray);
+
+    }
+
+    public void drawMonsterAttack(int monsterType) throws InterruptedException{
+        String[] monsterArray = null;
+
+
+        switch (monsterType) {
+
+            case 0:
+                monsterArray = MONSTER_A_ATK;
+                break;
+            case 1:
+                monsterArray = MONSTER_B_ATK;
+                break;
+            case 2:
+                monsterArray = MONSTER_C_ATK;
+                break;
+            case 3:
+                monsterArray = MONSTER_D_ATK;
+                break;
+
+
+        }
+        animateMonster(monsterArray);
+    }
+
+    private void animateMonster(String[] sprites) throws  InterruptedException{
+        for(String sprite : sprites){
+            monster.load(sprite);
+            Thread.sleep(150);
         }
     }
 
-    public void monsterGetHit(int hitDamage) throws  InterruptedException{
+    private void animate(String[] sprites) throws InterruptedException {
+        for (String sprite : sprites) {
+            player.load(sprite);
+            Thread.sleep(150);
+        }
+    }
+
+    public void monsterGetHit(int hitDamage,int monsterType) throws  InterruptedException{
         Text t = new Text(900,400,String.valueOf(hitDamage));
+        if(hitDamage == 0){
+            t.grow(50,0);
+            t.setText("MISS");
+        }
         t.setColor(Color.WHITE);
         t.grow(50,50);
+        monsterDamaged(monsterType);
         t.draw();
         for(int i = 0; i < 7; i++){
             t.translate(0,-10);
@@ -146,10 +222,16 @@ public class Display {
         t.delete();
 
     }
+
     public void playerGetHit(int hitDamage) throws  InterruptedException{
         Text t = new Text(300,400,String.valueOf(hitDamage));
+         if(hitDamage == 0){
+            t.grow(50,0);
+            t.setText("MISS");
+        }
         t.setColor(Color.WHITE);
         t.grow(50,50);
+        animate(PLAYER_DAMAGED);
         t.draw();
         for(int i = 0; i < 7; i++){
             t.translate(0,-10);
@@ -166,7 +248,7 @@ public class Display {
         for (String sprite : ATTACKDONE) {
 
             attack.load(sprite);
-            Thread.sleep(125);
+            Thread.sleep(50);
         }
 
         attack.delete();
@@ -181,7 +263,7 @@ public class Display {
         for (String sprite : M_ATTACKDONE) {
 
             mAttack.load(sprite);
-            Thread.sleep(125);
+            Thread.sleep(50);
         }
 
         mAttack.delete();
@@ -195,7 +277,7 @@ public class Display {
         for (String sprite : SPELLDONE) {
 
             spell.load(sprite);
-            Thread.sleep(100);
+            Thread.sleep(50);
         }
 
         spell.delete();
@@ -209,7 +291,7 @@ public class Display {
         for (String sprite : SPELLDONE) {
 
             mSpell.load(sprite);
-            Thread.sleep(100);
+            Thread.sleep(50);
         }
 
         mSpell.delete();
@@ -266,7 +348,7 @@ public class Display {
         for (String sprite : CHARGINGDONE) {
 
             charging.load(sprite);
-            Thread.sleep(250);
+            Thread.sleep(150);
         }
 
         charging.delete();
@@ -281,7 +363,7 @@ public class Display {
         for (String sprite : CHARGINGDONE) {
 
             mCharging.load(sprite);
-            Thread.sleep(250);
+            Thread.sleep(150);
         }
 
        mCharging.delete();
