@@ -30,10 +30,11 @@ public class HomeMenu {
 			}
 		};
 		thread.start();
-		//SoundManager.playSound(GameSound.MAIN_MENU);
+		SoundManager.playSound(GameSound.MAIN_MENU);
 	}
 
 	public void destroy() {
+		soundManager.dispose();
 		thread.stop();
 		visualSector.destroy();
 		inputSector.destroy();
