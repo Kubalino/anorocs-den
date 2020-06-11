@@ -61,7 +61,7 @@ public final class Sprites {
     final static String CHARGING_3 = "resources/sprites/charging effect/charging3.png";
     final static String CHARGING_4 = "resources/sprites/charging effect/charging4.png";
 
-    final static String[] CHARGINGDONE = {CHARGING_1, CHARGING_2, CHARGING_3, CHARGING_4, CHARGING_3, CHARGING_2,CHARGING_1 };
+    final static String[] CHARGINGDONE = {CHARGING_1, CHARGING_2, CHARGING_3, CHARGING_4, CHARGING_3, CHARGING_4, CHARGING_3,CHARGING_4,CHARGING_3,CHARGING_2,CHARGING_1 };
 
 
     // CHARGED ATTACK

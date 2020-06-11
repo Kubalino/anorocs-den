@@ -120,6 +120,30 @@ public class Display {
         }
     }
 
+    public void monsterGetHit(int hitDamage) throws  InterruptedException{
+        Text t = new Text(900,400,String.valueOf(hitDamage));
+        t.setColor(Color.WHITE);
+        t.grow(50,50);
+        t.draw();
+        for(int i = 0; i < 7; i++){
+            t.translate(0,-10);
+            Thread.sleep(200);
+        }
+        t.delete();
+
+    }
+    public void playerGetHit(int hitDamage) throws  InterruptedException{
+        Text t = new Text(300,400,String.valueOf(hitDamage));
+        t.setColor(Color.WHITE);
+        t.grow(50,50);
+        t.draw();
+        for(int i = 0; i < 7; i++){
+            t.translate(0,-10);
+            Thread.sleep(200);
+        }
+        t.delete();
+
+    }
 
     public void drawAttackDone() throws InterruptedException {
 

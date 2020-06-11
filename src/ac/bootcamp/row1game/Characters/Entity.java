@@ -20,6 +20,7 @@ public abstract class Entity implements Skills {
     private int baseDamage;
     private boolean isCharging = false;
     private int strongLeft;
+    private int hitDamage;
 
     public Entity(EntityType entity) {
         this.health = entity.getHealth();
@@ -44,11 +45,18 @@ public abstract class Entity implements Skills {
             }
             System.out.println("HIT Power: " + damage);
             target.hit(damage);
+
             return;
         }
         target.hit(0);
+
         System.out.println("It's a MISS!");
         return;
+    }
+
+    public int getHitDamage(){
+        return hitDamage;
+
     }
 
     @Override
@@ -62,9 +70,11 @@ public abstract class Entity implements Skills {
             }
             System.out.println(getEntityType() + ": Spell Power: " + damage);
             target.hit(damage);
+
             return;
         }
         target.hit(0);
+
         System.out.println(getEntityType() + ": It's a MISS!");
         return;
     }
@@ -92,6 +102,7 @@ public abstract class Entity implements Skills {
             if (Math.random() < getHIT_CHANCE()) {
                 System.out.println(getEntityType() + ": HUGE DAMAGE done!");
                 target.hit(damage);
+
                 }
 
                 strongLeft -=1;
@@ -162,6 +173,7 @@ public abstract class Entity implements Skills {
             damage = 0;
         }
 
+        hitDamage = damage;
         health = (health - damage <= 0 ? 0 : health - damage);
         System.out.println("HIT Damage: " + damage);
 

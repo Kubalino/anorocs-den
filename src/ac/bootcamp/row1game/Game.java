@@ -4,6 +4,8 @@ import ac.bootcamp.row1game.Characters.Entity;
 import ac.bootcamp.row1game.Characters.Factory;
 import ac.bootcamp.row1game.Characters.Player;
 import ac.bootcamp.row1game.display.Display;
+import org.academiadecodigo.simplegraphics.graphics.Color;
+import org.academiadecodigo.simplegraphics.graphics.Text;
 
 public class Game {
 
@@ -75,6 +77,8 @@ public class Game {
                         display.drawPlayerAttack();
                         display.drawAttackDone();
                         player.attack(monsters[monsterCounter]);
+                        display.monsterGetHit(monsters[monsterCounter].getHitDamage());
+
                         break;
                     case "2":
                         display.deleteActionBar();
@@ -82,6 +86,8 @@ public class Game {
                         player.spell(monsters[monsterCounter]);
                         display.drawPlayerAttack();
                         display.drawSpellDone();
+
+                        display.monsterGetHit(monsters[monsterCounter].getHitDamage());
                         break;
                     case "3":
                         display.deleteActionBar();
@@ -93,6 +99,8 @@ public class Game {
                         }
                         display.drawPlayerCharging();
                         player.strongAttack(player, monsters[monsterCounter]);
+
+
 
                         break;
                     case "4":
@@ -122,6 +130,7 @@ public class Game {
                 display.deleteActionBar();
                 player.strongAttack(player, monsters[monsterCounter]);
                 display.drawChargeDone();
+                display.monsterGetHit(monsters[monsterCounter].getHitDamage());
             }
 
 
@@ -153,12 +162,18 @@ public class Game {
            monsterSkill = RandomMonsterSkills.getRandomMonsterSkill(monsters[monsterCounter],player);
 
            switch (monsterSkill){
-               case ATTACK: display.drawMonsterAttackDone(); break;
+               case ATTACK: display.drawMonsterAttackDone();
+               display.playerGetHit(player.getHitDamage());
+               break;
                case BLOCK: display.drawMonsterAttackDone(); break;
                case HEAL: display.drawMonsterAttackDone(); break;
-               case SPELL: display.drawMonsterSpellDone(); break;
+               case SPELL: display.drawMonsterSpellDone();
+               display.playerGetHit(player.getHitDamage());
+               break;
                case CHARGE: display.drawMonsterCharging(); break;
-               case STRONG: display.drawMonsterChargeDone(); break;
+               case STRONG: display.drawMonsterChargeDone();
+               display.playerGetHit(player.getHitDamage());
+               break;
            }
 
         //   Thread.sleep(2000);
