@@ -50,11 +50,11 @@ public abstract class Entity implements Skills {
 
         if (Math.random() < getHIT_CHANCE()) {
             if(Math.random() < getCRIT_CHANCE() ){
-                System.out.println("CRITICAL HIT");
+                //System.out.println("CRITICAL HIT");
                 damage *=2;
                 crit = true;
             }
-            System.out.println("HIT Power: " + damage);
+            //System.out.println("HIT Power: " + damage);
             target.hit(damage);
 
             return;
@@ -62,7 +62,7 @@ public abstract class Entity implements Skills {
         target.hit(0);
 
 
-        System.out.println("It's a MISS!");
+        //System.out.println("It's a MISS!");
         return;
     }
 
@@ -77,11 +77,11 @@ public abstract class Entity implements Skills {
 
         if(Math.random() < getHIT_CHANCE()) {
             if(Math.random() < getCRIT_CHANCE()){
-                System.out.print("CRITICAL HIT");
+                //System.out.print("CRITICAL HIT");
                 damage *=2;
                 crit = true;
             }
-            System.out.println(getEntityType() + ": Spell Power: " + damage);
+            //System.out.println(getEntityType() + ": Spell Power: " + damage);
             target.hit(damage);
 
             return;
@@ -89,7 +89,7 @@ public abstract class Entity implements Skills {
         target.hit(0);
 
 
-        System.out.println(getEntityType() + ": It's a MISS!");
+        //System.out.println(getEntityType() + ": It's a MISS!");
         return;
     }
     public boolean getIsCharching(){
@@ -114,7 +114,7 @@ public abstract class Entity implements Skills {
 
         if(getIsCharching()) {
             if (Math.random() < getHIT_CHANCE()) {
-                System.out.println(getEntityType() + ": HUGE DAMAGE done!");
+                //System.out.println(getEntityType() + ": HUGE DAMAGE done!");
                 target.hit(damage);
 
                 }
@@ -125,7 +125,7 @@ public abstract class Entity implements Skills {
             return;
         }
 
-        System.out.println(monster.getEntityType() +  " is storing power!");
+        //System.out.println(monster.getEntityType() +  " is storing power!");
         isCharging = true;
         return;
 
@@ -135,7 +135,7 @@ public abstract class Entity implements Skills {
     public void block() {
 
         this.blocking = true;
-        System.out.println(getEntityType() + " activated Block!");
+        //System.out.println(getEntityType() + " activated Block!");
     }
 
     public int getMaxHP(){
@@ -149,12 +149,12 @@ public abstract class Entity implements Skills {
         int random = Randomizer.getRandom(min, max);
 
         if (potionAvailable <= 0) {
-            System.out.println(getEntityType() + " is out of Healing Potions...");
+            //System.out.println(getEntityType() + " is out of Healing Potions...");
             return;
         }
 
         health = (health + random <= maxHP ? health + random : maxHP);
-        System.out.println(getEntityType() + ": Using a " + random + " Healing Potion");
+        //System.out.println(getEntityType() + ": Using a " + random + " Healing Potion");
         potionAvailable -= 1;
     }
 
@@ -176,7 +176,7 @@ public abstract class Entity implements Skills {
 
         if (blocking) {
             if (!(damage == 0)) {
-                System.out.println(("Attack blocked! " + damage + " damage received!"));
+                //System.out.println(("Attack blocked! " + damage + " damage received!"));
                 damage = (int)(damage / 4);
             }
 
@@ -190,11 +190,11 @@ public abstract class Entity implements Skills {
 
         hitDamage = damage;
         health = (health - damage <= 0 ? 0 : health - damage);
-        System.out.println("HIT Damage: " + damage);
+        //System.out.println("HIT Damage: " + damage);
 
         if (health <= 0) {
             dead = true;
-            System.out.println(getEntityType() + " is dead!");
+            //System.out.println(getEntityType() + " is dead!");
         }
     }
 
@@ -212,7 +212,7 @@ public abstract class Entity implements Skills {
         health = maxHP;
         baseDamage += 5;
         defense += 3;
-        System.out.println(" Level up! " + level);
+        //System.out.println(" Level up! " + level);
     }
 
     public double getHIT_CHANCE() {

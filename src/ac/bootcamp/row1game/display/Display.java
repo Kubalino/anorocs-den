@@ -117,7 +117,7 @@ public class Display {
 
         for(String intro : INTROS){
             background.load(intro);
-            Thread.sleep(100);
+            Thread.sleep(10000);
         }
 
     }
@@ -125,7 +125,7 @@ public class Display {
     public void drawGameEnding() throws InterruptedException {
         Picture p = new Picture(10,10, BACKGROUND_5);
         p.draw();
-        Thread.sleep(5000);
+        Thread.sleep(10000);
         p.load(CREDITS);
     }
 

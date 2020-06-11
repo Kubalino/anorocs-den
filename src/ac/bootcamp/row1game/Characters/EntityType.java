@@ -6,9 +6,9 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 public enum EntityType {
     PLAYER(100, 20, 5),
     NORMAL_MONSTER(100,10,5),
-    ARMOURED_MONSTER(100, 10,10),
-    HEALER_MONSTER(200, 5, 4),
-    HIGH_DAMAGE_MONSTER(100, 25,5);
+    ARMOURED_MONSTER(100, 10,15),
+    HEALER_MONSTER(100, 5, 0),
+    HIGH_DAMAGE_MONSTER(200, 25,10);
 
 
     private int health;
