@@ -19,10 +19,10 @@ public final class Sprites {
     final static String[] INTROS = { INTRO_1, INTRO_2, INTRO_3};
 
     //CRIT
-    final static String CRIT = "resources/sprites/critical hit.png";
+    final static String CRIT = "resources/sprites/critical_hit.png";
 
     // ACTION BAR
-    final static String ACTION_BAR = "resources/sprites/action bar/action bar.png";
+    final static String ACTION_BAR = "resources/sprites/actionBar/action_bar.png";
 
     // PLAYER
     final static String PLAYER_ATTACK_1 = "resources/sprites/pAttack1.png";
@@ -42,49 +42,49 @@ public final class Sprites {
     final static String[] ATTACKSPRITES = {PLAYER_ATTACK_1, PLAYER_ATTACK_2,PLAYER_ATTACK_2, PLAYER_ATTACK_1, PLAYER_IDLE_1};
 
     // PLAYER ATTACK
-    final static String ATTACK_1 = "resources/sprites/pAttack efect/pA1.png";
-    final static String ATTACK_2 = "resources/sprites/pAttack efect/pA2.png";
-    final static String ATTACK_3 = "resources/sprites/pAttack efect/pA3.png";
-    final static String ATTACK_4 = "resources/sprites/pAttack efect/pA4.png";
-    final static String ATTACK_5 = "resources/sprites/pAttack efect/pA5.png";
-    final static String ATTACK_6 = "resources/sprites/pAttack efect/pA6.png";
+    final static String ATTACK_1 = "resources/sprites/pAttackEffect/pA1.png";
+    final static String ATTACK_2 = "resources/sprites/pAttackEffect/pA2.png";
+    final static String ATTACK_3 = "resources/sprites/pAttackEffect/pA3.png";
+    final static String ATTACK_4 = "resources/sprites/pAttackEffect/pA4.png";
+    final static String ATTACK_5 = "resources/sprites/pAttackEffect/pA5.png";
+    final static String ATTACK_6 = "resources/sprites/pAttackEffect/pA6.png";
 
     final static String[] ATTACKDONE = {ATTACK_1, ATTACK_2, ATTACK_3, ATTACK_4, ATTACK_5, ATTACK_6};
 
     // SPELL
-    final static String SPELL_1 = "resources/sprites/Spell effect/spell1.png";
-    final static String SPELL_2 = "resources/sprites/Spell effect/spell2.png";
-    final static String SPELL_3 = "resources/sprites/Spell effect/spell3.png";
-    final static String SPELL_4 = "resources/sprites/Spell effect/spell4.png";
-    final static String SPELL_5 = "resources/sprites/Spell effect/spell5.png";
-    final static String SPELL_6 = "resources/sprites/Spell effect/spell6.png";
-    final static String SPELL_7 = "resources/sprites/Spell effect/spell7.png";
-    final static String SPELL_8 = "resources/sprites/Spell effect/spell8.png";
-    final static String SPELL_9 = "resources/sprites/Spell effect/spell9.png";
-    final static String SPELL_10 = "resources/sprites/Spell effect/spell10.png";
+    final static String SPELL_1 = "resources/sprites/SpellEffect/spell1.png";
+    final static String SPELL_2 = "resources/sprites/SpellEffect/spell2.png";
+    final static String SPELL_3 = "resources/sprites/SpellEffect/spell3.png";
+    final static String SPELL_4 = "resources/sprites/SpellEffect/spell4.png";
+    final static String SPELL_5 = "resources/sprites/SpellEffect/spell5.png";
+    final static String SPELL_6 = "resources/sprites/SpellEffect/spell6.png";
+    final static String SPELL_7 = "resources/sprites/SpellEffect/spell7.png";
+    final static String SPELL_8 = "resources/sprites/SpellEffect/spell8.png";
+    final static String SPELL_9 = "resources/sprites/SpellEffect/spell9.png";
+    final static String SPELL_10 = "resources/sprites/SpellEffect/spell10.png";
 
     final static String[] SPELLDONE = {SPELL_1, SPELL_2, SPELL_3, SPELL_4, SPELL_5, SPELL_6, SPELL_7, SPELL_8, SPELL_9, SPELL_10};
 
     // CHARGING
 
-    final static String CHARGING_1 = "resources/sprites/charging effect/charging1.png";
-    final static String CHARGING_2 = "resources/sprites/charging effect/charging2.png";
-    final static String CHARGING_3 = "resources/sprites/charging effect/charging3.png";
-    final static String CHARGING_4 = "resources/sprites/charging effect/charging4.png";
+    final static String CHARGING_1 = "resources/sprites/chargingEffect/charging1.png";
+    final static String CHARGING_2 = "resources/sprites/chargingEffect/charging2.png";
+    final static String CHARGING_3 = "resources/sprites/chargingEffect/charging3.png";
+    final static String CHARGING_4 = "resources/sprites/chargingEffect/charging4.png";
 
     final static String[] CHARGINGDONE = {CHARGING_1, CHARGING_2, CHARGING_3, CHARGING_4, CHARGING_3, CHARGING_4, CHARGING_3,CHARGING_4,CHARGING_3,CHARGING_2,CHARGING_1 };
 
 
     // CHARGED ATTACK
-    final static String CHARGE_1 = "resources/sprites/ChargedAttack/c1.png";
-    final static String CHARGE_2 = "resources/sprites/ChargedAttack/c2.png";
-    final static String CHARGE_3 = "resources/sprites/ChargedAttack/c3.png";
-    final static String CHARGE_4 = "resources/sprites/ChargedAttack/c4.png";
-    final static String CHARGE_5 = "resources/sprites/ChargedAttack/c5.png";
-    final static String CHARGE_6 = "resources/sprites/ChargedAttack/c6.png";
-    final static String CHARGE_7 = "resources/sprites/ChargedAttack/c7.png";
-    final static String CHARGE_8 = "resources/sprites/ChargedAttack/c8.png";
-    final static String CHARGE_9 = "resources/sprites/ChargedAttack/c9.png";
+    final static String CHARGE_1 = "resources/sprites/chargedAttack/c1.png";
+    final static String CHARGE_2 = "resources/sprites/chargedAttack/c2.png";
+    final static String CHARGE_3 = "resources/sprites/chargedAttack/c3.png";
+    final static String CHARGE_4 = "resources/sprites/chargedAttack/c4.png";
+    final static String CHARGE_5 = "resources/sprites/chargedAttack/c5.png";
+    final static String CHARGE_6 = "resources/sprites/chargedAttack/c6.png";
+    final static String CHARGE_7 = "resources/sprites/chargedAttack/c7.png";
+    final static String CHARGE_8 = "resources/sprites/chargedAttack/c8.png";
+    final static String CHARGE_9 = "resources/sprites/chargedAttack/c9.png";
 
     final static String[] CHARGEDDONE = {CHARGE_1, CHARGE_2, CHARGE_3, CHARGE_4, CHARGE_5, CHARGE_6, CHARGE_5, CHARGE_4, CHARGE_7, CHARGE_8, CHARGE_9};
 
@@ -158,12 +158,12 @@ public final class Sprites {
     final static String[] MONSTER_D_DAMAGED = {MONSTER_D_1,MONSTER_D_X,MONSTER_D_1,MONSTER_D_X,MONSTER_D_1,MONSTER_D_X,MONSTER_D_1};
 
     // MONSTER ATTACK
-    final static String M_ATTACK_1 = "resources/sprites/mAttack effect/mA1.png";
-    final static String M_ATTACK_2 = "resources/sprites/mAttack effect/mA2.png";
-    final static String M_ATTACK_3 = "resources/sprites/mAttack effect/mA3.png";
-    final static String M_ATTACK_4 = "resources/sprites/mAttack effect/mA4.png";
-    final static String M_ATTACK_5 = "resources/sprites/mAttack effect/mA5.png";
-    final static String M_ATTACK_6 = "resources/sprites/mAttack effect/mA6.png";
+    final static String M_ATTACK_1 = "resources/sprites/mAttackEffect/mA1.png";
+    final static String M_ATTACK_2 = "resources/sprites/mAttackEffect/mA2.png";
+    final static String M_ATTACK_3 = "resources/sprites/mAttackEffect/mA3.png";
+    final static String M_ATTACK_4 = "resources/sprites/mAttackEffect/mA4.png";
+    final static String M_ATTACK_5 = "resources/sprites/mAttackEffect/mA5.png";
+    final static String M_ATTACK_6 = "resources/sprites/mAttackEffect/mA6.png";
 
     final static String[] M_ATTACKDONE = {M_ATTACK_1, M_ATTACK_2, M_ATTACK_3, M_ATTACK_4, M_ATTACK_5, M_ATTACK_6};
 
