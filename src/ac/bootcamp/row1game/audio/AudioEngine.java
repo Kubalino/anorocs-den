@@ -7,7 +7,7 @@ public class AudioEngine {
     private SoundFX fx = new SoundFX();
 
     public AudioEngine(){
-    //    MidiCore.setUpPlayer();
+        MidiCore.setUpPlayer();
     }
     public void attack() {
         fx.attack();
