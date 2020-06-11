@@ -63,7 +63,7 @@ public class Game {
 
             if (!player.getIsCharching()) {
 
-                display.drawActionBar();
+                display.drawActionBar(player.getPotionAvailable(), player.getStrongLeft());
 
 
                 while (!k.getIsPressed()) {
@@ -116,6 +116,7 @@ public class Game {
                         break;
                     case "5":
                         display.deleteActionBar();
+                        display.drawPlayerAttack();
                         if (player.getPotionAvailable() == 0) {
                             System.out.println("no more pots");
                             continue;

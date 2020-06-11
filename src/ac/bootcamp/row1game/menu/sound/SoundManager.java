@@ -56,12 +56,6 @@ public class SoundManager {
             return;
         }
 
-
-        /*
-        if(s.isPlaying()) {
-            return;
-        }*///TODO Huh? Remove this???
-
         s.play(true);
     }
 }
